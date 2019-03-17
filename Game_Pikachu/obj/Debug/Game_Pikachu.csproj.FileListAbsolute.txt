@@ -18,3 +18,9 @@ C:\Users\SyVN\Desktop\Game_Pikachu1\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.G
 C:\Users\SyVN\Desktop\Game_Pikachu1\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.CoreCompileInputs.cache
 C:\Users\SyVN\Desktop\Game_Pikachu1\Game_Pikachu\obj\Debug\Game_Pikachu.exe
 C:\Users\SyVN\Desktop\Game_Pikachu1\Game_Pikachu\obj\Debug\Game_Pikachu.pdb
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csprojAssemblyReference.cache
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.Form1.resources
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.MenuGame.resources
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.GenerateResource.cache
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.exe
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.pdb
