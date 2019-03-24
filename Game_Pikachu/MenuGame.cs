@@ -12,9 +12,16 @@ namespace Game_Pikachu
 {
     public partial class MenuGame : Form
     {
+        Play Pl = new Play();
         public MenuGame()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pl.Show();
+            this.Hide();
         }
     }
 }

@@ -24,3 +24,14 @@ D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\
 D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.GenerateResource.cache
 D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.exe
 D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Git\Demo\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.pdb
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csprojAssemblyReference.cache
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.MenuGame.resources
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.Play.resources
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.GenerateResource.cache
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.exe
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.pdb
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.exe.config
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.exe
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.pdb
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.Properties.Resources.resources
+D:\lập trình\Ky 2 nam 3\Thực tập nhóm\Pikachu\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.CoreCompileInputs.cache
