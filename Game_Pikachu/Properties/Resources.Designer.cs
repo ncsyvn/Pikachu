@@ -63,9 +63,9 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pokemon_go_pokemon_raichu_110524_1280x720 {
+        internal static System.Drawing.Bitmap _14578669e52ac18 {
             get {
-                object obj = ResourceManager.GetObject("pokemon_go_pokemon_raichu_110524_1280x720", resourceCulture);
+                object obj = ResourceManager.GetObject("14578669e52ac18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tải_xuống {
+        internal static System.Drawing.Bitmap about1 {
             get {
-                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
+                object obj = ResourceManager.GetObject("about1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tải_xuống1 {
+        internal static System.Drawing.Bitmap about2 {
             get {
-                object obj = ResourceManager.GetObject("tải xuống1", resourceCulture);
+                object obj = ResourceManager.GetObject("about2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,99 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Test {
+        internal static System.Drawing.Bitmap circle_png_circle_png_hd_1600 {
             get {
-                object obj = ResourceManager.GetObject("Test", resourceCulture);
+                object obj = ResourceManager.GetObject("circle-png-circle-png-hd-1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap continue1 {
+            get {
+                object obj = ResourceManager.GetObject("continue1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap continue2 {
+            get {
+                object obj = ResourceManager.GetObject("continue2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit1 {
+            get {
+                object obj = ResourceManager.GetObject("exit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit2 {
+            get {
+                object obj = ResourceManager.GetObject("exit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guide1 {
+            get {
+                object obj = ResourceManager.GetObject("guide1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guide2 {
+            get {
+                object obj = ResourceManager.GetObject("guide2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap khung_dai {
+            get {
+                object obj = ResourceManager.GetObject("khung_dai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap start1 {
+            get {
+                object obj = ResourceManager.GetObject("start1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap start2 {
+            get {
+                object obj = ResourceManager.GetObject("start2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +196,26 @@ namespace Game_Pikachu.Properties {
         internal static System.Drawing.Bitmap tro_choi_pikachu_game {
             get {
                 object obj = ResourceManager.GetObject("tro-choi-pikachu-game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view {
+            get {
+                object obj = ResourceManager.GetObject("view", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
