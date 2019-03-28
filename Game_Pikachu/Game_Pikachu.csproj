@@ -101,5 +101,31 @@
   <ItemGroup>
     <None Include="Resources\pikachu_background_21.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\101-opening.mp3" />
+    <Content Include="Sounds\102-palette town theme.mp3" />
+    <Content Include="Sounds\106-the road to viridian city - from palette.mp3" />
+    <Content Include="Sounds\111-pokemon recovery.mp3" />
+    <Content Include="Sounds\113-guidepost.mp3" />
+    <Content Include="Sounds\116-victory %28vs trainer%29.mp3" />
+    <Content Include="Sounds\125-the road to lavender town - from vermillion.mp3" />
+    <Content Include="Sounds\Click_pokemon.mp3" />
+    <Content Include="Sounds\Click_pokemon_10.mp3" />
+    <Content Include="Sounds\Click_pokemon_11.mp3" />
+    <Content Include="Sounds\Click_pokemon_12.mp3" />
+    <Content Include="Sounds\Click_pokemon_13.mp3" />
+    <Content Include="Sounds\Click_pokemon_14.mp3" />
+    <Content Include="Sounds\Click_pokemon_2.mp3" />
+    <Content Include="Sounds\Click_pokemon_3.mp3" />
+    <Content Include="Sounds\Click_pokemon_4.mp3" />
+    <Content Include="Sounds\Click_pokemon_5.mp3" />
+    <Content Include="Sounds\Click_pokemon_6.mp3" />
+    <Content Include="Sounds\Click_pokemon_7.mp3" />
+    <Content Include="Sounds\Click_pokemon_8.mp3" />
+    <Content Include="Sounds\Click_pokemon_9.mp3" />
+    <Content Include="Sounds\error_click.mp3" />
+    <Content Include="Sounds\error_click_2.mp3" />
+    <Content Include="Sounds\error_click_3.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
