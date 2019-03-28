@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace Game_Pikachu
 {
-    public partial class Form1 : Form
+    public partial class UserForm : Form
     {
-        public Form1()
+        public UserForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Easy");
-        }
+
     }
 }
