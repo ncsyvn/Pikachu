@@ -27,6 +27,6 @@ C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.csproj.CoreC
 C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.exe.config
 C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.exe
 C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\bin\Debug\Game_Pikachu.pdb
-C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.SelectForm.resources
 C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.UserForm.resources
 C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.NewSelectForm.resources
+C:\Users\SyVN\Documents\Pikachu\Game_Pikachu\obj\Debug\Game_Pikachu.PlayForm.resources
