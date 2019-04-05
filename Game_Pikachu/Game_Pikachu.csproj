@@ -52,11 +52,11 @@
     <Compile Include="NewSelectForm.Designer.cs">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectForm.cs">
+    <Compile Include="PlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectForm.Designer.cs">
-      <DependentUpon>SelectForm.cs</DependentUpon>
+    <Compile Include="PlayForm.Designer.cs">
+      <DependentUpon>PlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="NewSelectForm.resx">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectForm.resx">
-      <DependentUpon>SelectForm.cs</DependentUpon>
+    <EmbeddedResource Include="PlayForm.resx">
+      <DependentUpon>PlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,19 +99,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pokemon_go_pokemon_raichu_110524_1280x720.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tro-choi-pikachu-game.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tải xuống.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tải xuống.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\14578669e52ac18.jpg" />
@@ -157,6 +145,47 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-pikachu-de-thuong-9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1.png" />
+    <Content Include="Resources\10.png" />
+    <Content Include="Resources\11.png" />
+    <Content Include="Resources\12.png" />
+    <Content Include="Resources\13.png" />
+    <Content Include="Resources\14.png" />
+    <Content Include="Resources\15.png" />
+    <Content Include="Resources\16.png" />
+    <Content Include="Resources\17.png" />
+    <Content Include="Resources\18.png" />
+    <Content Include="Resources\19.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\20.png" />
+    <Content Include="Resources\21.png" />
+    <Content Include="Resources\22.png" />
+    <Content Include="Resources\23.png" />
+    <Content Include="Resources\24.png" />
+    <Content Include="Resources\25.png" />
+    <Content Include="Resources\26.png" />
+    <Content Include="Resources\27.png" />
+    <Content Include="Resources\28.png" />
+    <Content Include="Resources\29.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\30.png" />
+    <Content Include="Resources\31.png" />
+    <Content Include="Resources\4.png" />
+    <Content Include="Resources\5.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\Fantastic-pokemon-hd-wallpaper-sumsung.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\mythical-pokemon-20th-anniversary.jpg" />
+    <None Include="Resources\56641434_2360977737295523_6324701134225145856_n.png" />
+    <Content Include="Resources\6.png" />
+    <Content Include="Resources\7.png" />
+    <Content Include="Resources\8.png" />
+    <Content Include="Resources\9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

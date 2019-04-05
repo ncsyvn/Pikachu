@@ -16,7 +16,7 @@ namespace Game_Pikachu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewSelectForm());
+            Application.Run(new PlayForm());
         }
     }
 }
