@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,8 +47,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="NewSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,14 +78,38 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayForm.resx">
       <DependentUpon>PlayForm.cs</DependentUpon>
+=======
+    <Compile Include="MenuGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGame.Designer.cs">
+      <DependentUpon>MenuGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Play.Designer.cs">
+      <DependentUpon>Play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MenuGame.resx">
+      <DependentUpon>MenuGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Play.resx">
+      <DependentUpon>Play.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+<<<<<<< HEAD
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
+=======
+>>>>>>> master
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +130,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\tro-choi-pikachu-game.png" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +218,12 @@
     <Content Include="Resources\7.png" />
     <Content Include="Resources\8.png" />
     <Content Include="Resources\9.png" />
+=======
+    <None Include="Resources\pikachu_background_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikachu_background_21.png" />
+>>>>>>> master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

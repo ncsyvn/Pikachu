@@ -63,9 +63,15 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap _1 {
             get {
                 object obj = ResourceManager.GetObject("1", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap pikachu_background_2 {
+            get {
+                object obj = ResourceManager.GetObject("pikachu_background_2", resourceCulture);
+>>>>>>> master
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,6 +79,7 @@ namespace Game_Pikachu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap _10 {
             get {
                 object obj = ResourceManager.GetObject("10", resourceCulture);
@@ -566,6 +573,11 @@ namespace Game_Pikachu.Properties {
         internal static System.Drawing.Bitmap tro_choi_pikachu_game {
             get {
                 object obj = ResourceManager.GetObject("tro-choi-pikachu-game", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap pikachu_background_21 {
+            get {
+                object obj = ResourceManager.GetObject("pikachu_background_21", resourceCulture);
+>>>>>>> master
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

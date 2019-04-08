@@ -8,6 +8,7 @@ namespace Game_Pikachu
 {
     static class Program
     {
+        static public MenuGame menu;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,13 @@ namespace Game_Pikachu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new PlayForm());
+=======
+            menu=new MenuGame();
+            menu.Show();
+            Application.Run();
+>>>>>>> master
         }
     }
 }
