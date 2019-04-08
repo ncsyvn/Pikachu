@@ -75,7 +75,7 @@
             this.labelMark.BackColor = System.Drawing.Color.Black;
             this.labelMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMark.ForeColor = System.Drawing.Color.Lime;
-            this.labelMark.Location = new System.Drawing.Point(42, 119);
+            this.labelMark.Location = new System.Drawing.Point(41, 119);
             this.labelMark.Name = "labelMark";
             this.labelMark.Size = new System.Drawing.Size(24, 25);
             this.labelMark.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.labelSwapLocation.Name = "labelSwapLocation";
             this.labelSwapLocation.Size = new System.Drawing.Size(24, 25);
             this.labelSwapLocation.TabIndex = 6;
-            this.labelSwapLocation.Text = "3";
+            this.labelSwapLocation.Text = "5";
             // 
             // label4
             // 
