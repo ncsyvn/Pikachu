@@ -34,8 +34,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -110,6 +112,18 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Người Chơi Cũ";
             // 
+            // buttonStart
+            // 
+            this.buttonStart.BackColor = System.Drawing.Color.Transparent;
+            this.buttonStart.BackgroundImage = global::Game_Pikachu.Properties.Resources.start2;
+            this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStart.Location = new System.Drawing.Point(183, 257);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(93, 35);
+            this.buttonStart.TabIndex = 16;
+            this.buttonStart.TabStop = false;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +131,7 @@
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -128,6 +143,7 @@
             this.Text = "UserForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +157,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox buttonStart;
     }
 }

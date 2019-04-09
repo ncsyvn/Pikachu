@@ -150,7 +150,7 @@
             // panelContainIcon
             // 
             this.panelContainIcon.BackColor = System.Drawing.Color.Transparent;
-            this.panelContainIcon.Location = new System.Drawing.Point(109, 46);
+            this.panelContainIcon.Location = new System.Drawing.Point(125, 51);
             this.panelContainIcon.Name = "panelContainIcon";
             this.panelContainIcon.Size = new System.Drawing.Size(630, 362);
             this.panelContainIcon.TabIndex = 0;
@@ -165,6 +165,7 @@
             this.buttonPlayAgain.Size = new System.Drawing.Size(97, 36);
             this.buttonPlayAgain.TabIndex = 12;
             this.buttonPlayAgain.TabStop = false;
+            this.buttonPlayAgain.Click += new System.EventHandler(this.buttonPlayAgain_Click);
             // 
             // buttonExit
             // 
@@ -176,6 +177,7 @@
             this.buttonExit.Size = new System.Drawing.Size(42, 33);
             this.buttonExit.TabIndex = 13;
             this.buttonExit.TabStop = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // PlayForm
             // 
@@ -197,6 +199,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContainIcon);
             this.Name = "PlayForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlayForm";
             this.Load += new System.EventHandler(this.PlayForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.buttonPlayAgain)).EndInit();
