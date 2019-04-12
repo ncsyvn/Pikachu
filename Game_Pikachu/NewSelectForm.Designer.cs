@@ -38,6 +38,7 @@
             this.buttonGuide = new System.Windows.Forms.PictureBox();
             this.buttonContinue = new System.Windows.Forms.PictureBox();
             this.buttonStart = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonGuide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonContinue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -55,9 +57,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Game_Pikachu.Properties.Resources.start1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 142);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 175);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 55);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -66,9 +69,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Game_Pikachu.Properties.Resources.exit1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(115, 342);
+            this.pictureBox2.Location = new System.Drawing.Point(153, 421);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(160, 55);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
@@ -77,9 +81,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Game_Pikachu.Properties.Resources.about1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(115, 292);
+            this.pictureBox3.Location = new System.Drawing.Point(153, 359);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 45);
+            this.pictureBox3.Size = new System.Drawing.Size(160, 55);
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
@@ -88,9 +93,10 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::Game_Pikachu.Properties.Resources.guide1;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(115, 242);
+            this.pictureBox4.Location = new System.Drawing.Point(153, 298);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 45);
+            this.pictureBox4.Size = new System.Drawing.Size(160, 55);
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
@@ -99,9 +105,10 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::Game_Pikachu.Properties.Resources.continue1;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(115, 192);
+            this.pictureBox5.Location = new System.Drawing.Point(153, 236);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(120, 42);
+            this.pictureBox5.Size = new System.Drawing.Size(160, 52);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
@@ -110,9 +117,10 @@
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
             this.buttonExit.BackgroundImage = global::Game_Pikachu.Properties.Resources.exit2;
             this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonExit.Location = new System.Drawing.Point(115, 342);
+            this.buttonExit.Location = new System.Drawing.Point(153, 421);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(120, 45);
+            this.buttonExit.Size = new System.Drawing.Size(160, 55);
             this.buttonExit.TabIndex = 19;
             this.buttonExit.TabStop = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -122,9 +130,10 @@
             this.buttonAbout.BackColor = System.Drawing.Color.Transparent;
             this.buttonAbout.BackgroundImage = global::Game_Pikachu.Properties.Resources.about2;
             this.buttonAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonAbout.Location = new System.Drawing.Point(115, 292);
+            this.buttonAbout.Location = new System.Drawing.Point(153, 359);
+            this.buttonAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(120, 45);
+            this.buttonAbout.Size = new System.Drawing.Size(160, 55);
             this.buttonAbout.TabIndex = 18;
             this.buttonAbout.TabStop = false;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
@@ -134,9 +143,10 @@
             this.buttonGuide.BackColor = System.Drawing.Color.Transparent;
             this.buttonGuide.BackgroundImage = global::Game_Pikachu.Properties.Resources.guide2;
             this.buttonGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonGuide.Location = new System.Drawing.Point(115, 242);
+            this.buttonGuide.Location = new System.Drawing.Point(153, 298);
+            this.buttonGuide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonGuide.Name = "buttonGuide";
-            this.buttonGuide.Size = new System.Drawing.Size(120, 45);
+            this.buttonGuide.Size = new System.Drawing.Size(160, 55);
             this.buttonGuide.TabIndex = 17;
             this.buttonGuide.TabStop = false;
             this.buttonGuide.Click += new System.EventHandler(this.buttonGuide_Click);
@@ -146,9 +156,10 @@
             this.buttonContinue.BackColor = System.Drawing.Color.Transparent;
             this.buttonContinue.BackgroundImage = global::Game_Pikachu.Properties.Resources.continue2;
             this.buttonContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonContinue.Location = new System.Drawing.Point(115, 192);
+            this.buttonContinue.Location = new System.Drawing.Point(153, 236);
+            this.buttonContinue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonContinue.Name = "buttonContinue";
-            this.buttonContinue.Size = new System.Drawing.Size(120, 42);
+            this.buttonContinue.Size = new System.Drawing.Size(160, 52);
             this.buttonContinue.TabIndex = 16;
             this.buttonContinue.TabStop = false;
             this.buttonContinue.Click += new System.EventHandler(this.buttonContinue_Click);
@@ -158,20 +169,34 @@
             this.buttonStart.BackColor = System.Drawing.Color.Transparent;
             this.buttonStart.BackgroundImage = global::Game_Pikachu.Properties.Resources.start2;
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonStart.Location = new System.Drawing.Point(115, 142);
+            this.buttonStart.Location = new System.Drawing.Point(153, 175);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(120, 45);
+            this.buttonStart.Size = new System.Drawing.Size(160, 55);
             this.buttonStart.TabIndex = 15;
             this.buttonStart.TabStop = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute1;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(944, 23);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox6.TabIndex = 20;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // NewSelectForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonGuide);
@@ -182,9 +207,11 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NewSelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewSelectForm";
+            this.Load += new System.EventHandler(this.NewSelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -195,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonGuide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonContinue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +238,6 @@
         private System.Windows.Forms.PictureBox buttonGuide;
         private System.Windows.Forms.PictureBox buttonContinue;
         private System.Windows.Forms.PictureBox buttonStart;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
