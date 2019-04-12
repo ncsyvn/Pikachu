@@ -177,6 +177,8 @@
     <Content Include="Resources\31.png" />
     <Content Include="Resources\4.png" />
     <Content Include="Resources\5.png" />
+    <Content Include="Sounds\101-opening %28online-audio-converter.com%29.wav" />
+    <None Include="Resources\mute1.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\Fantastic-pokemon-hd-wallpaper-sumsung.jpg" />
     <None Include="Resources\images.jpg" />

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Media;
 namespace Game_Pikachu
 {
     public partial class PlayForm : Form
@@ -27,7 +27,16 @@ namespace Game_Pikachu
         {
             // ProgressBar chạy thời gian.
             progressBarTime.PerformStep();
+            SoundPlayer sound = new SoundPlayer(@"C:\Users\levan\Desktop\Slice bài giảng\Thực tập nhóm\Code\Pikachu\Game_Pikachu\Sounds\101-opening (online-audio-converter.com).wav");
+            sound.LoadAsync();
+            sound.Play();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            SoundPlayer sound = new SoundPlayer(@"C:\Users\levan\Desktop\Slice bài giảng\Thực tập nhóm\Code\Pikachu\Game_Pikachu\Sounds\101-opening (online-audio-converter.com).wav");
+            sound.LoadAsync();
+            sound.Stop();
+        }
     }
 }
