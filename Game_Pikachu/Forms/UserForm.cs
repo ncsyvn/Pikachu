@@ -17,6 +17,13 @@ namespace Game_Pikachu
             InitializeComponent();
         }
 
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayForm pf = new PlayForm();
+            pf.Show();
+        }
+
 
     }
 }

@@ -20,7 +20,9 @@ namespace Game_Pikachu
         #region Click to Button Start
         private void buttonStart_Click(object sender, EventArgs e)
         {
+           
             buttonStart.Visible = false;
+            this.Hide();
             Form UserForm1 = new UserForm();
             //UserForm1.WindowState = 
             UserForm1.Show();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Game_Pikachu
 {
     public partial class PlayForm : Form
@@ -17,6 +18,9 @@ namespace Game_Pikachu
             InitializeComponent();
             // Chạy timer, có tác dụng ở progressBar
             timer.Start();
+            DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
+            drawPanelContainIcon.ProcessRandomIcon(panelContainIcon);
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -29,5 +33,19 @@ namespace Game_Pikachu
             progressBarTime.PerformStep();
         }
 
+        // Exit Game
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        // Play again
+        private void buttonPlayAgain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form newPlayForm = new PlayForm();
+            newPlayForm.StartPosition = FormStartPosition.CenterScreen;
+            newPlayForm.Show();
+        }
     }
 }
