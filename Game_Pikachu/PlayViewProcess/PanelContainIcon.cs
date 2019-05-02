@@ -12,12 +12,13 @@ namespace Game_Pikachu
     public class DrawPanelContainIcon
     {
         #region property
-        private Panel panel = new Panel();
-        private PictureBox [,] matrixIcon= new PictureBox[100,100];
-        private PictureBox[] arrayIcon = new PictureBox[100];
-        private int[,] numberMatrixIcon = new int[100, 100];
-        private int numberIcon;
-        private int[] numberIconArray = new int[100];
+        public Panel panel = new Panel();
+        public PictureBox [,] matrixIcon= new PictureBox[100,100];
+        public PictureBox[] arrayIcon = new PictureBox[100];
+        public int[,] numberMatrixIcon = new int[100, 100];
+        public int numberIcon;
+        public int[] numberIconArray = new int[100];
+        public int[] idIconArray = new int[100];
         #endregion
 
         #region Random số lượng Icon và số lần xuất hiện mỗi Icon
@@ -54,34 +55,12 @@ namespace Game_Pikachu
         }
         #endregion
 
-        #region Khởi tạo panel chứa Icon và set các thuộc tính
-    /*    public void Draw(Panel panel)
-        {
-            int i, j;
-            this.panel = panel;
-            for (i=0; i<12; i++)
-            {
-                for (j=0; j<21; j++)
-                {
-                    PictureBox icon = new PictureBox();
-                    icon.Size = new Size(30, 30);
-                    icon.Location = new Point(j * 30, i * 30);
-                    icon.BackgroundImage = global::Game_Pikachu.Properties.Resources._1;
-                    icon.BackColor = Color.Transparent;
-                    icon.BackgroundImageLayout = ImageLayout.Stretch;
-                    matrixIcon[i, j] = icon;
-                    panel.Controls.Add(matrixIcon[i, j]);
-                    
-                }
-            }
-        }
-        */
-        #endregion
+
 
         #region Sau khi đã random số lượng Icon, thì random mã Icon cho các Icon đó
         public void RandomIdIcon()
         {
-            int i;
+            int i, random;
             RandomNumberIconArray();
             Random rnd = new Random();
             PictureBox[] arrayIconTg = new PictureBox[100];
@@ -120,8 +99,10 @@ namespace Game_Pikachu
 
             for (i = 0; i < numberIcon; i++)
             {
+                random = rnd.Next(0, 27);
                 arrayIcon[i] = new PictureBox();
-                arrayIcon[i].BackgroundImage = arrayIconTg[rnd.Next(0, 27)].BackgroundImage;
+                arrayIcon[i].BackgroundImage = arrayIconTg[random].BackgroundImage;
+                idIconArray[i] = random;
             }
         }
         #endregion
@@ -151,12 +132,12 @@ namespace Game_Pikachu
                     if (count[tg]<=numberIconArray[tg])
                     {
                         matrixIcon[i, j].BackgroundImage = arrayIcon[tg].BackgroundImage;
-                        numberMatrixIcon[i, j] = tg;
+                        numberMatrixIcon[i, j] = idIconArray[tg];
                         panel.Controls.Add(matrixIcon[i, j]);
                     }
                     else
                     {
-                        for (k = 0; k < tg; k++) arrayIcon[k] = arrayIcon[k + 1];
+                        for (k = tg; k < numberIcon-1; k++) arrayIcon[k] = arrayIcon[k + 1];
                         numberIcon--;
                     }
                 }
