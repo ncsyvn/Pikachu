@@ -110,8 +110,7 @@ namespace Game_Pikachu
         #region Lưu vào ma trận Icon và mã trận Mã Icon
         public void ProcessRandomIcon(Panel panel)
         {
-
-            
+        
             RandomIdIcon();
             this.panel = panel;
             int i, j, k, tg;
@@ -128,6 +127,8 @@ namespace Game_Pikachu
                     icon.BackColor = Color.Transparent;
                     icon.BackgroundImageLayout = ImageLayout.Stretch;
                     matrixIcon[i, j] = icon;
+                    matrixIcon[i, j].Click += PictureBox_Click;
+
                     tg = rnd.Next(0, numberIcon);
                     if (count[tg]<=numberIconArray[tg])
                     {
@@ -144,8 +145,15 @@ namespace Game_Pikachu
             }
         }
 
+        void PictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            pictureBox.BackgroundImage = null;
+        }
 
         #endregion
+
+
 
     }
 }
