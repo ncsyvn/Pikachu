@@ -20,7 +20,7 @@ namespace Game_Pikachu
             timer.Start();
             DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
             drawPanelContainIcon.ProcessRandomIcon(panelContainIcon);
-            
+
         }
 
         private void timer_Tick(object sender, EventArgs e)
