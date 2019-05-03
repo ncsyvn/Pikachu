@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Game_Pikachu.PlayViewProcess
 {
-    public class ProcessPlay
+    public class InitialProcessEvent
     {
         public void ProcessEvent(DrawPanelContainIcon drawPanelContainIcon, Panel panelContainIcon)
         {

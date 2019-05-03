@@ -19,9 +19,9 @@ namespace Game_Pikachu
             InitializeComponent();
             // Chạy timer, có tác dụng ở progressBar
             timer.Start();
-            ProcessPlay processPlay = new ProcessPlay();
+            InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
             DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
-            processPlay.ProcessEvent(drawPanelContainIcon, panelContainIcon);
+            InitialProcessPlay.ProcessEvent(drawPanelContainIcon, panelContainIcon);
         }
 
         private void timer_Tick(object sender, EventArgs e)

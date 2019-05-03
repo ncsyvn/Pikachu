@@ -22,10 +22,6 @@ namespace Game_Pikachu
         public static int checkFlag = 1;
         public static int x1, y1, x2, y2;
         public static string[] position = new string[2];
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
         #endregion
 
         #region Random số lượng Icon và số lần xuất hiện mỗi Icon
@@ -137,11 +133,7 @@ namespace Game_Pikachu
                     if (count[tg]<=numberIconArray[tg])
                     {
                         matrixIcon[i, j].BackgroundImage = arrayIcon[tg].BackgroundImage;
-<<<<<<< HEAD
-                        matrixIcon[i, j].Name = (i+1).ToString() +' '+ (j+1).ToString();
-=======
                         matrixIcon[i, j].Name = (i + 1).ToString() + ' ' + (j + 1).ToString();
->>>>>>> develop
                         numberMatrixIcon[i, j] = idIconArray[tg];
                         panel.Controls.Add(matrixIcon[i, j]);
                     }
@@ -153,11 +145,6 @@ namespace Game_Pikachu
                 }
             }
             // Bọc xung quanh bởi số 0
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> develop
             Add0();
         }
         #endregion
@@ -191,47 +178,11 @@ namespace Game_Pikachu
         }
         #endregion
 
-<<<<<<< HEAD
-=======
-        #region Thêm vòng số 0
-        void Add0()
-        {
-            int i, j;
-            // Đẩy lên 1 hàng
-            for (i = 12; i >= 1; i--)
-            {
-                for (j = 0; j < 21; j++) numberMatrixIcon[i, j] = numberMatrixIcon[i - 1, j];
-            }
-
-            // Đẩy sang phải 1 cột
-            for (j = 21; j >= 1; j--)
-            {
-                for (i = 1; i < 13; i++) numberMatrixIcon[i, j] = numberMatrixIcon[i, j - 1];
-            }
-
-            for (i = 0; i < 13; i++)
-            {
-                numberMatrixIcon[i, 0] = 0;
-                numberMatrixIcon[i, 12] = 0;
-            }
-            for (j = 0; j < 22; j++)
-            {
-                numberMatrixIcon[0, j] = 0;
-                numberMatrixIcon[13, j] = 0;
-            }
-        }
-        #endregion
-
->>>>>>> develop
         #region Tạo sự kiện click của mỗi Icon
         void PictureBox_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
-<<<<<<< HEAD
-            if (checkFlag==1)
-=======
             if (checkFlag == 1)
->>>>>>> develop
             {
                 pictureBox.Size = new Size(35, 35);
                 pictureBox.BorderStyle = BorderStyle.Fixed3D;
@@ -240,22 +191,14 @@ namespace Game_Pikachu
                 y1 = Convert.ToInt16(position[1]);
                 checkFlag = 2;
             }
-<<<<<<< HEAD
-            else if (checkFlag==2)
-=======
             else if (checkFlag == 2)
->>>>>>> develop
             {
                 position = pictureBox.Name.Split(' ');
                 x2 = Convert.ToInt16(position[0]);
                 y2 = Convert.ToInt16(position[1]);
 
                 checkFlag = 1;
-<<<<<<< HEAD
-                if (x1==x2 && y1==y2)
-=======
                 if (x1 == x2 && y1 == y2)
->>>>>>> develop
                 {
                     pictureBox.Size = new Size(30, 30);
                     pictureBox.BorderStyle = BorderStyle.None;
@@ -270,23 +213,12 @@ namespace Game_Pikachu
         #endregion
 
         #region Gắn sự kiện click cho mỗi Icon
-<<<<<<< HEAD
-        
-        void ProcessEventClick()
-        {
-            int i, j;
-            for (i=0; i<12; i++)
-            {
-                for (j=0; j<21; j++)
-=======
-
         void ProcessEventClick()
         {
             int i, j;
             for (i = 0; i < 12; i++)
             {
                 for (j = 0; j < 21; j++)
->>>>>>> develop
                 {
                     matrixIcon[i, j].Click += PictureBox_Click;
                 }
@@ -294,9 +226,5 @@ namespace Game_Pikachu
         }
 
         #endregion
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
     }
 }
