@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
-
+using System.Text.RegularExpressions;
 
 namespace Game_Pikachu
 {
     public class DrawPanelContainIcon
     {
         #region property
-        public Panel panel = new Panel();
-        public PictureBox [,] matrixIcon= new PictureBox[100,100];
+        private Panel panel = new Panel();
+        public PictureBox[,] matrixIcon = new PictureBox[100, 100];
         public PictureBox[] arrayIcon = new PictureBox[100];
         public int[,] numberMatrixIcon = new int[100, 100];
         public int numberIcon;
@@ -110,9 +110,7 @@ namespace Game_Pikachu
 
         #region Lưu vào ma trận Icon và mã trận Mã Icon
         public void ProcessRandomIcon(Panel panel)
-        {
-
-            
+        {       
             RandomIdIcon();
             this.panel = panel;
             int i, j, k, tg;
@@ -129,6 +127,8 @@ namespace Game_Pikachu
                     icon.BackColor = Color.Transparent;
                     icon.BackgroundImageLayout = ImageLayout.Stretch;
                     matrixIcon[i, j] = icon;
+                    matrixIcon[i, j].Click += PictureBox_Click;
+
                     tg = rnd.Next(0, numberIcon);
                     if (count[tg]<=numberIconArray[tg])
                     {
@@ -145,11 +145,8 @@ namespace Game_Pikachu
                 }
             }
             // Bọc xung quanh bởi số 0
-
             Add0();
         }
-
-
         #endregion
 
         #region Thêm vòng số 0
@@ -157,13 +154,13 @@ namespace Game_Pikachu
         {
             int i, j;
             // Đẩy lên 1 hàng
-            for (i = 12; i >= 1; i--)
+            for (i=12; i>=1; i--)
             {
                 for (j = 0; j < 21; j++) numberMatrixIcon[i, j] = numberMatrixIcon[i - 1, j];
             }
 
             // Đẩy sang phải 1 cột
-            for (j = 21; j >= 1; j--)
+            for (j=21; j>=1; j--)
             {
                 for (i = 1; i < 13; i++) numberMatrixIcon[i, j] = numberMatrixIcon[i, j - 1];
             }
@@ -216,7 +213,6 @@ namespace Game_Pikachu
         #endregion
 
         #region Gắn sự kiện click cho mỗi Icon
-
         void ProcessEventClick()
         {
             int i, j;
@@ -230,6 +226,5 @@ namespace Game_Pikachu
         }
 
         #endregion
-
     }
 }

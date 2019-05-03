@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Game_Pikachu.PlayViewProcess
 {
-    public class ProcessPlay
+    public class InitialProcessEvent
     {
         public void ProcessEvent(DrawPanelContainIcon drawPanelContainIcon, Panel panelContainIcon)
         {
@@ -15,6 +15,5 @@ namespace Game_Pikachu.PlayViewProcess
             Panel panel = new Panel();
             drawPanelContainIcon.ProcessRandomIcon(panelContainIcon);
         }
-
     }
 }

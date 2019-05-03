@@ -52,6 +52,7 @@
     <Compile Include="Forms\NewSelectForm.Designer.cs">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayViewProcess\InitialProcessEvent.cs" />
     <Compile Include="PlayViewProcess\PanelContainIcon.cs" />
     <Compile Include="Forms\PlayForm.cs">
       <SubType>Form</SubType>
@@ -59,7 +60,6 @@
     <Compile Include="Forms\PlayForm.Designer.cs">
       <DependentUpon>PlayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayViewProcess\ProcessPlay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\UserForm.cs">
