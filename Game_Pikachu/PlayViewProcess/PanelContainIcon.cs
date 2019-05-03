@@ -29,10 +29,10 @@ namespace Game_Pikachu
             int sum = 0;
             int tg, i;
             Random rnd = new Random();
-            this.numberIcon = rnd.Next(10, 15);
+            this.numberIcon = rnd.Next(18, 22);
             for (i=0; i<numberIcon; i++)
             {
-                tg=rnd.Next(20, 30);
+                tg=rnd.Next(10, 15);
                 sum += tg;
                 if (sum<252)
                 {
@@ -54,8 +54,6 @@ namespace Game_Pikachu
             }
         }
         #endregion
-
-
 
         #region Sau khi đã random số lượng Icon, thì random mã Icon cho các Icon đó
         public void RandomIdIcon()
@@ -132,6 +130,7 @@ namespace Game_Pikachu
                     if (count[tg]<=numberIconArray[tg])
                     {
                         matrixIcon[i, j].BackgroundImage = arrayIcon[tg].BackgroundImage;
+                        matrixIcon[i, j].Name = (i + 1).ToString() + ' ' + (j + 1).ToString();
                         numberMatrixIcon[i, j] = idIconArray[tg];
                         panel.Controls.Add(matrixIcon[i, j]);
                     }
@@ -142,9 +141,41 @@ namespace Game_Pikachu
                     }
                 }
             }
+            // Bọc xung quanh bởi số 0
+
+            Add0();
         }
 
 
+        #endregion
+
+        #region Thêm vòng số 0
+        void Add0()
+        {
+            int i, j;
+            // Đẩy lên 1 hàng
+            for (i = 12; i >= 1; i--)
+            {
+                for (j = 0; j < 21; j++) numberMatrixIcon[i, j] = numberMatrixIcon[i - 1, j];
+            }
+
+            // Đẩy sang phải 1 cột
+            for (j = 21; j >= 1; j--)
+            {
+                for (i = 1; i < 13; i++) numberMatrixIcon[i, j] = numberMatrixIcon[i, j - 1];
+            }
+
+            for (i = 0; i < 13; i++)
+            {
+                numberMatrixIcon[i, 0] = 0;
+                numberMatrixIcon[i, 12] = 0;
+            }
+            for (j = 0; j < 22; j++)
+            {
+                numberMatrixIcon[0, j] = 0;
+                numberMatrixIcon[13, j] = 0;
+            }
+        }
         #endregion
 
     }
