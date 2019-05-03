@@ -19,6 +19,9 @@ namespace Game_Pikachu
         public int numberIcon;
         public int[] numberIconArray = new int[100];
         public int[] idIconArray = new int[100];
+        public static int checkFlag = 1;
+        public static int x1, y1, x2, y2;
+        public static string[] position = new string[2];
         #endregion
 
         #region Random số lượng Icon và số lần xuất hiện mỗi Icon
@@ -176,6 +179,56 @@ namespace Game_Pikachu
                 numberMatrixIcon[13, j] = 0;
             }
         }
+        #endregion
+
+        #region Tạo sự kiện click của mỗi Icon
+        void PictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            if (checkFlag == 1)
+            {
+                pictureBox.Size = new Size(35, 35);
+                pictureBox.BorderStyle = BorderStyle.Fixed3D;
+                position = pictureBox.Name.Split(' ');
+                x1 = Convert.ToInt16(position[0]);
+                y1 = Convert.ToInt16(position[1]);
+                checkFlag = 2;
+            }
+            else if (checkFlag == 2)
+            {
+                position = pictureBox.Name.Split(' ');
+                x2 = Convert.ToInt16(position[0]);
+                y2 = Convert.ToInt16(position[1]);
+
+                checkFlag = 1;
+                if (x1 == x2 && y1 == y2)
+                {
+                    pictureBox.Size = new Size(30, 30);
+                    pictureBox.BorderStyle = BorderStyle.None;
+                }
+                else
+                {
+                    pictureBox.Size = new Size(35, 35);
+                    pictureBox.BorderStyle = BorderStyle.Fixed3D;
+                }
+            }
+        }
+        #endregion
+
+        #region Gắn sự kiện click cho mỗi Icon
+
+        void ProcessEventClick()
+        {
+            int i, j;
+            for (i = 0; i < 12; i++)
+            {
+                for (j = 0; j < 21; j++)
+                {
+                    matrixIcon[i, j].Click += PictureBox_Click;
+                }
+            }
+        }
+
         #endregion
 
     }
