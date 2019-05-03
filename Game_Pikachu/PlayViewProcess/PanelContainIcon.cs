@@ -186,35 +186,29 @@ namespace Game_Pikachu
             PictureBox pictureBox = sender as PictureBox;
             if (checkFlag==1)
             {
-                pictureBox.Size = new Size(40, 40);
+                pictureBox.Size = new Size(35, 35);
                 pictureBox.BorderStyle = BorderStyle.Fixed3D;
                 position = pictureBox.Name.Split(' ');
                 x1 = Convert.ToInt16(position[0]);
                 y1 = Convert.ToInt16(position[1]);
-                //MessageBox.Show(x1.ToString() + ' ' + y1.ToString());
                 checkFlag = 2;
             }
             else if (checkFlag==2)
             {
-                pictureBox.Size = new Size(40, 40);
                 position = pictureBox.Name.Split(' ');
                 x2 = Convert.ToInt16(position[0]);
                 y2 = Convert.ToInt16(position[1]);
-               
+
+                checkFlag = 1;
                 if (x1==x2 && y1==y2)
                 {
-                    checkFlag = 1;
                     pictureBox.Size = new Size(30, 30);
                     pictureBox.BorderStyle = BorderStyle.None;
-                    //MessageBox.Show(x2.ToString() + ' ' + y2.ToString());
-
                 }
                 else
                 {
-                    pictureBox.Size = new Size(40, 40);
+                    pictureBox.Size = new Size(35, 35);
                     pictureBox.BorderStyle = BorderStyle.Fixed3D;
-                    //MessageBox.Show(x2.ToString() + ' ' + y2.ToString());
-
                 }
             }
         }
