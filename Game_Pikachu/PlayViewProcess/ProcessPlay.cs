@@ -12,7 +12,7 @@ namespace Game_Pikachu.PlayViewProcess
         public int CheckColumn(int [,] numberMatrixIcon, int x1, int x2, int y)
         {
             int i;
-            for (i = x1; i <= x2; i++)
+            for (i = x1 + 1; i < x2; i++) 
                 if (numberMatrixIcon[i, y] != 0) return 0;
             return 1;
         }
@@ -22,7 +22,7 @@ namespace Game_Pikachu.PlayViewProcess
         public int CheckRow(int[,] numberMatrixIcon, int y1, int y2, int x)
         {
             int i;
-            for (i = y1; i <= y2; i++)
+            for (i = y1 + 1; i < y2; i++) 
                 if (numberMatrixIcon[x, i] != 0) return 0;
             return 1;
         }
