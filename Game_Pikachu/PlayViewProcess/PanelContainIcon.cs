@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Text.RegularExpressions;
+using Game_Pikachu.PlayViewProcess;
 
 namespace Game_Pikachu
 {
@@ -182,6 +183,7 @@ namespace Game_Pikachu
         void PictureBox_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
+            ProcessPlay processPlay = new ProcessPlay();
             if (checkFlag == 1)
             {
                 pictureBox.Size = new Size(35, 35);
