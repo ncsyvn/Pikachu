@@ -8,5 +8,10 @@ namespace Game_Pikachu.PlayViewProcess
 {
     struct MethodReturn
     {
+        private int flag;
+        private int up;
+        private int down;
+        private int left;
+        private int right;
     }
 }
