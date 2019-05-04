@@ -60,6 +60,7 @@
     <Compile Include="Forms\PlayForm.Designer.cs">
       <DependentUpon>PlayForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayViewProcess\PointNew.cs" />
     <Compile Include="PlayViewProcess\ProcessPlay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

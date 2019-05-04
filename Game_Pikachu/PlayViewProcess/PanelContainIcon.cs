@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using Game_Pikachu.PlayViewProcess;
+using PointNew = Game_Pikachu.PlayViewProcess.PointNew;
 
 namespace Game_Pikachu
 {
@@ -21,7 +22,8 @@ namespace Game_Pikachu
         public int[] numberIconArray = new int[100];
         public int[] idIconArray = new int[100];
         public static int checkFlag = 1;
-        public static int x1, y1, x2, y2;
+        public static PointNew p1 = new PointNew();
+        public static PointNew p2= new PointNew();
         public static string[] position = new string[2];
         #endregion
 
@@ -189,18 +191,18 @@ namespace Game_Pikachu
                 pictureBox.Size = new Size(35, 35);
                 pictureBox.BorderStyle = BorderStyle.Fixed3D;
                 position = pictureBox.Name.Split(' ');
-                x1 = Convert.ToInt16(position[0]);
-                y1 = Convert.ToInt16(position[1]);
+                p1.x = Convert.ToInt16(position[0]);
+                p1.y = Convert.ToInt16(position[1]);
                 checkFlag = 2;
             }
             else if (checkFlag == 2)
             {
                 position = pictureBox.Name.Split(' ');
-                x2 = Convert.ToInt16(position[0]);
-                y2 = Convert.ToInt16(position[1]);
+                p2.x = Convert.ToInt16(position[0]);
+                p2.y = Convert.ToInt16(position[1]);
 
                 checkFlag = 1;
-                if (x1 == x2 && y1 == y2)
+                if (p1.x == p2.x && p1.y == p2.y)
                 {
                     pictureBox.Size = new Size(30, 30);
                     pictureBox.BorderStyle = BorderStyle.None;
