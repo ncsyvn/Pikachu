@@ -8,6 +8,8 @@ namespace Game_Pikachu.PlayViewProcess
 {
     public class ProcessPlay
     {
+        public static PointNew[] arrayPoint = new PointNew[4];
+
         #region Check Column
         public int CheckColumn(int [,] numberMatrixIcon, int x1, int x2, int y)
         {
@@ -28,5 +30,7 @@ namespace Game_Pikachu.PlayViewProcess
         }
         #endregion
 
+       // public void FindZigZug(int [,] matrixNumberIcon, int x1, int x2, int y1, int y2)
+        
     }
 }
