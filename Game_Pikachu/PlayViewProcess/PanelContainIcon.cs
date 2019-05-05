@@ -193,10 +193,13 @@ namespace Game_Pikachu
                 position = pictureBox.Name.Split(' ');
                 p1.x = Convert.ToInt16(position[0]);
                 p1.y = Convert.ToInt16(position[1]);
+                MessageBox.Show(position[0] + ' ' + position[1]);
+                MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
                 checkFlag = 2;
             }
             else if (checkFlag == 2)
             {
+                //MessageBox.Show(numberMatrixIcon[0, 13].ToString());
                 position = pictureBox.Name.Split(' ');
                 p2.x = Convert.ToInt16(position[0]);
                 p2.y = Convert.ToInt16(position[1]);
@@ -209,8 +212,80 @@ namespace Game_Pikachu
                 }
                 else
                 {
-                    pictureBox.Size = new Size(35, 35);
-                    pictureBox.BorderStyle = BorderStyle.Fixed3D;
+                    // Xử lý trường hợp 2 Icon ăn nhau theo hàng ngang
+                    if (processPlay.FindRow(numberMatrixIcon, p1, p2) == 1) 
+                    {
+                        panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
+                        panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+                        numberMatrixIcon[p1.x, p1.y] = 0;
+                        numberMatrixIcon[p2.x, p2.y] = 0;
+                        MessageBox.Show(position[0] + ' ' + position[1]);
+                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+                    }
+
+                    // Xử lý trường hợp 2 Icon ăn nhau theo hàng dọc
+                    else if (processPlay.FindColumn(numberMatrixIcon, p1, p2) == 1)
+                    {
+                        panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
+                        panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+                        numberMatrixIcon[p1.x, p1.y] = 0;
+                        numberMatrixIcon[p2.x, p2.y] = 0;
+                        MessageBox.Show(position[0] + ' ' + position[1]);
+                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+
+                    }
+
+                    // Xử lý đường gấp khúc từ trái qua phải
+                    else if (processPlay.ZigZugLeftToRight(numberMatrixIcon, p1, p2) == 1)
+                    {
+                        panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
+                        panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+                        numberMatrixIcon[p1.x, p1.y] = 0;
+                        numberMatrixIcon[p2.x, p2.y] = 0;
+                        MessageBox.Show(position[0] + ' ' + position[1]);
+                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+
+                        //MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
+                        //MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
+                    }
+
+                    // Xử lý gấp khúc từ trên xuống dưới
+                    else if (processPlay.ZigZugUpToDown(numberMatrixIcon, p1, p2) == 1)
+                    {
+                        panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
+                        panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+                        numberMatrixIcon[p1.x, p1.y] = 0;
+                        numberMatrixIcon[p2.x, p2.y] = 0;
+                        MessageBox.Show(position[0] + ' ' + position[1]);
+                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+
+                        //MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
+                        //MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
+                    }
+
+
+                    // Trường hợp 2 Icon không ăn được nhau
+                    else
+                    {
+                        MessageBox.Show(position[0] + ' ' + position[1]);
+                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+
+                        // Tạo một Icon tg bằng với Icon p1, vì sự kiện của p1 lúc này không xử lý được nữa
+                        PictureBox pictureBoxTg = new PictureBox();
+                        pictureBoxTg = matrixIcon[p1.x - 1, p1.y - 1];
+                        pictureBoxTg.Size = new Size(30, 30);
+                        pictureBoxTg.BorderStyle = BorderStyle.None;
+
+                        // Xóa p1
+                        panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
+
+                        // Chèn tg vào đúng vị trí của p1
+                        panel.Controls.Add(pictureBoxTg);
+
+                        // Đưa p2 về trạng thái ban đầu
+                        pictureBox.Size = new Size(30, 30);
+                        pictureBox.BorderStyle = BorderStyle.None;
+                    }
                 }
             }
         }
