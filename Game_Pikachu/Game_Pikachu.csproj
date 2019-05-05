@@ -67,6 +67,7 @@
     <Compile Include="Forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sounds and img Sounds\Sounds.cs" />
     <EmbeddedResource Include="Forms\NewSelectForm.resx">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +179,11 @@
     <Content Include="Resources\31.png" />
     <Content Include="Resources\4.png" />
     <Content Include="Resources\5.png" />
+    <None Include="Resources\mute.png" />
+    <Content Include="Sounds and img Sounds\Content\101-opening %28online-audio-converter.com%29.wav" />
+    <Content Include="Sounds and img Sounds\Content\102-palette town theme.mp3" />
+    <Content Include="Sounds and img Sounds\Content\mute %281%29.png" />
+    <Content Include="Sounds and img Sounds\Content\mute.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\Fantastic-pokemon-hd-wallpaper-sumsung.jpg" />
     <None Include="Resources\images.jpg" />
@@ -188,6 +194,16 @@
     <Content Include="Resources\8.png" />
     <Content Include="Resources\9.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
