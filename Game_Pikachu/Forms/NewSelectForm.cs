@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_Pikachu.PlayViewProcess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Game_Pikachu
 {
     public partial class NewSelectForm : Form
     {
+        Sounds sound2 = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\101-opening (online-audio-converter.com).wav");
+        int i_sounds2 = 1;
         public NewSelectForm()
         {
             InitializeComponent();
@@ -23,6 +26,7 @@ namespace Game_Pikachu
            
             buttonStart.Visible = false;
             this.Hide();
+            sound2.Stop();
             Form UserForm1 = new UserForm();
             //UserForm1.WindowState = 
             UserForm1.Show();
@@ -55,10 +59,28 @@ namespace Game_Pikachu
         private void buttonExit_Click(object sender, EventArgs e)
         {
             buttonExit.Visible = false;
+            this.Close();
         }
+
 
         #endregion
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            i_sounds2++;
+            NewSelectForm_Load(sender, e);
+        }
 
+        private void NewSelectForm_Load(object sender, EventArgs e)
+        {
+            if (i_sounds2 % 2 == 0)
+            {
+                sound2.Pause();
+            }
+            else
+            {
+                sound2.Resume();
+            }
+        }
     }
 }
