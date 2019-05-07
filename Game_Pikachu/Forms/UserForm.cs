@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace Game_Pikachu
 {
@@ -43,6 +45,32 @@ namespace Game_Pikachu
             else
             {
                 sound1.Resume();
+            }
+        }
+        public void Load_DanhSachNguoiChoi()
+        {
+            DataBase.Connection();
+
+            string SqlSelect_TenNguoiChoi = "Select Nguoi_Choi.Ten_Nguoi_Choi From Nguoi_Choi";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = DataBase.conn;
+            cmd.CommandText = SqlSelect_TenNguoiChoi;
+
+            try
+            {
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    var ListUser = new DataTable();
+                    ListUser.Load(reader);
+                    reader.Dispose();
+                    this.comboBox1.DataSource = ListUser;
+                    this.comboBox1.DisplayMember = "Ten_Nguoi_Choi";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
             }
         }
     }

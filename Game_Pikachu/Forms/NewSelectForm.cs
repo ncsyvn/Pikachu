@@ -28,8 +28,9 @@ namespace Game_Pikachu
             this.Hide();
             sound2.Stop();
             Form UserForm1 = new UserForm();
-            //UserForm1.WindowState = 
+            //UserForm1.WindowState =
             UserForm1.Show();
+            
 
         }
         #endregion
