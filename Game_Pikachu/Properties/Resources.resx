@@ -179,7 +179,8 @@
   </data>
   <data name="LineRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LineRow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="Fantastic-pokemon-hd-wallpaper-sumsung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+    <data name="Fantastic-pokemon-hd-wallpaper-sumsung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fantastic-pokemon-hd-wallpaper-sumsung.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="29" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -199,7 +200,8 @@
   </data>
   <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+    <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -299,7 +301,8 @@
     <value>..\Resources\31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EndGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EndGame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+      <value>..\Resources\EndGame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

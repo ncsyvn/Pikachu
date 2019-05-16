@@ -183,7 +183,6 @@
             // buttonPlayAgain
             // 
             this.buttonPlayAgain.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPlayAgain.BackgroundImage = global::Game_Pikachu.Properties.Resources._56641434_2360977737295523_6324701134225145856_n;
             this.buttonPlayAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPlayAgain.Location = new System.Drawing.Point(8, 458);
             this.buttonPlayAgain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -196,7 +195,6 @@
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.BackgroundImage = global::Game_Pikachu.Properties.Resources.exit;
             this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonExit.Location = new System.Drawing.Point(993, 6);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -282,7 +280,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(25, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -297,7 +294,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackgroundImage = global::Game_Pikachu.Properties.Resources.Fantastic_pokemon_hd_wallpaper_sumsung;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
             this.ClientSize = new System.Drawing.Size(800, 450);
