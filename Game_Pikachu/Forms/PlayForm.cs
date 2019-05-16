@@ -1,4 +1,5 @@
-﻿using Game_Pikachu.PlayViewProcess;
+﻿using Game_Pikachu.Forms;
+using Game_Pikachu.PlayViewProcess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,11 +28,19 @@ namespace Game_Pikachu
         private void timer_Tick(object sender, EventArgs e)
         {
             progressBarTime.PerformStep();
+            if (progressBarTime.Value == 3000)
+            {
+                timer.Stop();
+                EndGame endGame = new EndGame();
+                endGame.Show();
+            }
         }
         private void PlayForm_Load(object sender, EventArgs e)
         {
             // ProgressBar chạy thời gian.
             progressBarTime.PerformStep();
+            
+            
         }
 
         // Exit Game
