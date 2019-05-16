@@ -25,6 +25,7 @@ namespace Game_Pikachu
         public static PointNew p1 = new PointNew();
         public static PointNew p2= new PointNew();
         public static string[] position = new string[2];
+        PointNew[] arrayPoint = new PointNew[4];
         #endregion
 
         #region Random số lượng Icon và số lần xuất hiện mỗi Icon
@@ -168,12 +169,27 @@ namespace Game_Pikachu
                 for (i = 1; i < 13; i++) numberMatrixIcon[i, j] = numberMatrixIcon[i, j - 1];
             }
 
-            for (i = 0; i < 13; i++)
+            for (i = 0; i < 14; i++)
             {
+                /*
+                PictureBox pt = new PictureBox();
+                pt.Size = new Size(30, 30);
+                pt.Location = new Point(-30, -30 + i * 30);
+                matrixIcon[i, 0] = pt;
+                pt.BackColor = Color.Red;
+                panel.Controls.Add(matrixIcon[i, 0]);
+                
+                PictureBox pt1 = new PictureBox();
+                pt.Size = new Size(30, 30);
+                pt.Location = new Point(630, -30 + i * 30);
+                matrixIcon[i, 22] = pt1;
+                panel.Controls.Add(matrixIcon[i, 22]);
+                */
                 numberMatrixIcon[i, 0] = 0;
-                numberMatrixIcon[i, 12] = 0;
+                numberMatrixIcon[i, 22] = 0;
+
             }
-            for (j = 0; j < 22; j++)
+            for (j = 0; j < 23; j++)
             {
                 numberMatrixIcon[0, j] = 0;
                 numberMatrixIcon[13, j] = 0;
@@ -193,13 +209,10 @@ namespace Game_Pikachu
                 position = pictureBox.Name.Split(' ');
                 p1.x = Convert.ToInt16(position[0]);
                 p1.y = Convert.ToInt16(position[1]);
-              //  MessageBox.Show(position[0] + ' ' + position[1]);
-              //  MessageBox.Show(numberMatrixIcon[p1.x, p1.y].ToString());
                 checkFlag = 2;
             }
             else if (checkFlag == 2)
             {
-                //MessageBox.Show(numberMatrixIcon[0, 13].ToString());
                 position = pictureBox.Name.Split(' ');
                 p2.x = Convert.ToInt16(position[0]);
                 p2.y = Convert.ToInt16(position[1]);
@@ -208,28 +221,44 @@ namespace Game_Pikachu
                 if (p1.x == p2.x && p1.y == p2.y)
                 {
                     pictureBox.Size = new Size(30, 30);
-                    pictureBox.BorderStyle = BorderStyle.None;
+                    pictureBox.BorderStyle = BorderStyle.None;                 
                 }
                 else
                 {
                     // Xử lý trường hợp 2 Icon ăn nhau theo hàng ngang
                     if (processPlay.FindRow(numberMatrixIcon, p1, p2) == 1) 
                     {
+                        // Vẽ đường đi ngang tạm thời chưa ok
+                        //DrawLine drawLine = new DrawLine();
+                        //drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, p1, p2);
+
+                        // Xóa 2 Icon
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
                         panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+
+                        // set mã 2 icon = 0
                         numberMatrixIcon[p1.x, p1.y] = 0;
                         numberMatrixIcon[p2.x, p2.y] = 0;
-                   //     MessageBox.Show(position[0] + ' ' + position[1]);
-                   //     MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+
+                        // In ra đường đi
                     }
 
                     // Xử lý trường hợp 2 Icon ăn nhau theo hàng dọc
                     else if (processPlay.FindColumn(numberMatrixIcon, p1, p2) == 1)
                     {
+
+                        // Vẽ đường đi thẳng cột tạm thời chưa ok
+                         //DrawLine drawLine = new DrawLine();
+                         //drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, p1, p2);
+
+                        // Xóa 2 Icon
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
                         panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+
+                        // Set mã 2 Icon = 0
                         numberMatrixIcon[p1.x, p1.y] = 0;
                         numberMatrixIcon[p2.x, p2.y] = 0;
+
                     //    MessageBox.Show(position[0] + ' ' + position[1]);
                    //     MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
 
@@ -238,10 +267,25 @@ namespace Game_Pikachu
                     // Xử lý đường gấp khúc từ trái qua phải
                     else if (processPlay.ZigZugLeftToRight(numberMatrixIcon, p1, p2) == 1)
                     {
+                        //Vẽ đường đi tạm thời chưa ok
+                        //DrawLine drawLine = new DrawLine();
+                       /* MessageBox.Show(arrayPoint[0].x.ToString() + ' ' + arrayPoint[0].y.ToString() +
+                            ' ' + arrayPoint[1].x.ToString() + ' ' + arrayPoint[1].y.ToString() +
+                            ' ' + arrayPoint[2].x.ToString() + ' ' + arrayPoint[2].y.ToString() +
+                            ' ' + arrayPoint[3].x.ToString() + ' ' + arrayPoint[3].y.ToString());
+                        drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[0], arrayPoint[1]);
+                        drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, arrayPoint[1], arrayPoint[2]);
+                        drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[2], arrayPoint[3]);
+                        */
+
+                        // Xóa 2 Icon
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
                         panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
+
+                        // Set mã 2 Icon = 0
                         numberMatrixIcon[p1.x, p1.y] = 0;
                         numberMatrixIcon[p2.x, p2.y] = 0;
+
                      //   MessageBox.Show(position[0] + ' ' + position[1]);
                      //   MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
 
@@ -267,8 +311,8 @@ namespace Game_Pikachu
                     // Trường hợp 2 Icon không ăn được nhau
                     else
                     {
-                        MessageBox.Show(position[0] + ' ' + position[1]);
-                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+                     //   MessageBox.Show(position[0] + ' ' + position[1]);
+                       // MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
 
                         // Tạo một Icon tg bằng với Icon p1, vì sự kiện của p1 lúc này không xử lý được nữa
                         PictureBox pictureBoxTg = new PictureBox();
@@ -305,5 +349,8 @@ namespace Game_Pikachu
         }
 
         #endregion
+
+
+        
     }
 }
