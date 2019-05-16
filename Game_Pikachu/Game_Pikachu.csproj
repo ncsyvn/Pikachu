@@ -95,6 +95,8 @@
     <EmbeddedResource Include="Forms\EndGame.resx">
       <DependentUpon>EndGame.cs</DependentUpon>
     </EmbeddedResource>
+
+    <Compile Include="Sounds and img Sounds\Sounds.cs" />
     <EmbeddedResource Include="Forms\NewSelectForm.resx">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +214,11 @@
     <None Include="Resources\LineRow1.png" />
     <None Include="Resources\LineColumn1.png" />
     <Content Include="Resources\LineRow.png" />
+    <None Include="Resources\mute.png" />
+    <Content Include="Sounds and img Sounds\Content\101-opening %28online-audio-converter.com%29.wav" />
+    <Content Include="Sounds and img Sounds\Content\102-palette town theme.mp3" />
+    <Content Include="Sounds and img Sounds\Content\mute %281%29.png" />
+    <Content Include="Sounds and img Sounds\Content\mute.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\Fantastic-pokemon-hd-wallpaper-sumsung.jpg" />
     <None Include="Resources\mythical-pokemon-20th-anniversary.jpg" />
@@ -232,6 +239,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
