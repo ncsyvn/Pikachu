@@ -556,6 +556,13 @@ namespace Game_Pikachu.Properties {
         internal static System.Drawing.Bitmap LineRow {
             get {
                 object obj = ResourceManager.GetObject("LineRow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mute {
             get {
                 object obj = ResourceManager.GetObject("mute", resourceCulture);

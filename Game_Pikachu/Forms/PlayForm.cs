@@ -15,7 +15,7 @@ namespace Game_Pikachu
 {
     public partial class PlayForm : Form
     {
-        Sounds sound = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\102-palette town theme.mp3");
+        Sounds sound = new Sounds(@"C:\Users\SyVN\SoundPlay.mp3");
         int i_sounds = 1;
         public PlayForm()
         {
@@ -45,10 +45,12 @@ namespace Game_Pikachu
 
             if (i_sounds % 2 == 0)
             {
+                labelSound.Visible = false;
                 sound.Pause();
             }
             else
             {
+                labelSound.Visible = true;
                 sound.Resume();
             }
 

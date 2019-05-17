@@ -26,6 +26,12 @@ namespace Game_Pikachu
         public static PointNew p2= new PointNew();
         public static string[] position = new string[2];
         PointNew[] arrayPoint = new PointNew[4];
+
+        Button buttonP1 = new Button();
+        Button buttonP2 = new Button();
+        Button buttonP3 = new Button();
+        Button buttonP4 = new Button();
+
         #endregion
 
         #region Random số lượng Icon và số lần xuất hiện mỗi Icon
@@ -112,7 +118,7 @@ namespace Game_Pikachu
         }
         #endregion
 
-        #region Lưu vào ma trận Icon và mã trận Mã Icon
+        #region Lưu vào ma trận Icon và ma trận Mã Icon
         public void ProcessRandomIcon(Panel panel)
         {       
             RandomIdIcon();
@@ -147,6 +153,27 @@ namespace Game_Pikachu
                         numberIcon--;
                     }
                 }
+                buttonP1.Location = new Point(157, 375);
+                buttonP1.Size = new Size(56, 19);
+                buttonP1.BackColor = Color.AliceBlue;
+
+                buttonP2.Location = new Point(237, 375);
+                buttonP2.Size = new Size(56, 19);
+                buttonP2.BackColor = Color.AliceBlue;
+
+                buttonP3.Location = new Point(317, 375);
+                buttonP3.Size = new Size(56, 19);
+                buttonP3.BackColor = Color.AliceBlue;
+
+                buttonP4.Location = new Point(397, 375);
+                buttonP4.Size = new Size(56, 19);
+                buttonP4.BackColor = Color.AliceBlue;
+
+
+                panel.Controls.Add(buttonP1);
+                panel.Controls.Add(buttonP2);
+                panel.Controls.Add(buttonP3);
+                panel.Controls.Add(buttonP4);
             }
             // Bọc xung quanh bởi số 0
             Add0();
@@ -228,6 +255,10 @@ namespace Game_Pikachu
                     // Xử lý trường hợp 2 Icon ăn nhau theo hàng ngang
                     if (processPlay.FindRow(numberMatrixIcon, p1, p2) == 1) 
                     {
+                        buttonP1.Text = "{"+ ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                        buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                        buttonP3.Text = "";
+                        buttonP4.Text = "";
                         // Vẽ đường đi ngang tạm thời chưa ok
                         //DrawLine drawLine = new DrawLine();
                         //drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, p1, p2);
@@ -247,9 +278,13 @@ namespace Game_Pikachu
                     else if (processPlay.FindColumn(numberMatrixIcon, p1, p2) == 1)
                     {
 
+                        buttonP1.Text = "{" + ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                        buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                        buttonP3.Text = "";
+                        buttonP4.Text = "";
                         // Vẽ đường đi thẳng cột tạm thời chưa ok
-                         //DrawLine drawLine = new DrawLine();
-                         //drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, p1, p2);
+                        //DrawLine drawLine = new DrawLine();
+                        //drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, p1, p2);
 
                         // Xóa 2 Icon
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
@@ -267,16 +302,31 @@ namespace Game_Pikachu
                     // Xử lý đường gấp khúc từ trái qua phải
                     else if (processPlay.ZigZugLeftToRight(numberMatrixIcon, p1, p2) == 1)
                     {
+                        if (ProcessPlay.arrayPoint[3]==ProcessPlay.arrayPoint[2])
+                        {
+                            buttonP1.Text = "{" + ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                            buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                            buttonP3.Text = "{" + ProcessPlay.arrayPoint[2].x.ToString() + "; " + ProcessPlay.arrayPoint[2].y.ToString() + "}";
+                            buttonP4.Text = "";
+                        }
+                        else
+                        {
+                            buttonP1.Text = "{" + ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                            buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                            buttonP3.Text = "{" + ProcessPlay.arrayPoint[2].x.ToString() + "; " + ProcessPlay.arrayPoint[2].y.ToString() + "}";
+                            buttonP4.Text = "{" + ProcessPlay.arrayPoint[3].x.ToString() + "; " + ProcessPlay.arrayPoint[3].y.ToString() + "}";
+                        }
+
                         //Vẽ đường đi tạm thời chưa ok
                         //DrawLine drawLine = new DrawLine();
-                       /* MessageBox.Show(arrayPoint[0].x.ToString() + ' ' + arrayPoint[0].y.ToString() +
-                            ' ' + arrayPoint[1].x.ToString() + ' ' + arrayPoint[1].y.ToString() +
-                            ' ' + arrayPoint[2].x.ToString() + ' ' + arrayPoint[2].y.ToString() +
-                            ' ' + arrayPoint[3].x.ToString() + ' ' + arrayPoint[3].y.ToString());
-                        drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[0], arrayPoint[1]);
-                        drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, arrayPoint[1], arrayPoint[2]);
-                        drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[2], arrayPoint[3]);
-                        */
+                        /* MessageBox.Show(arrayPoint[0].x.ToString() + ' ' + arrayPoint[0].y.ToString() +
+                             ' ' + arrayPoint[1].x.ToString() + ' ' + arrayPoint[1].y.ToString() +
+                             ' ' + arrayPoint[2].x.ToString() + ' ' + arrayPoint[2].y.ToString() +
+                             ' ' + arrayPoint[3].x.ToString() + ' ' + arrayPoint[3].y.ToString());
+                         drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[0], arrayPoint[1]);
+                         drawLine.DrawLineColumn(panel, numberMatrixIcon, matrixIcon, arrayPoint[1], arrayPoint[2]);
+                         drawLine.DrawLineRow(panel, numberMatrixIcon, matrixIcon, arrayPoint[2], arrayPoint[3]);
+                         */
 
                         // Xóa 2 Icon
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
@@ -296,6 +346,21 @@ namespace Game_Pikachu
                     // Xử lý gấp khúc từ trên xuống dưới
                     else if (processPlay.ZigZugUpToDown(numberMatrixIcon, p1, p2) == 1)
                     {
+                        if (ProcessPlay.arrayPoint[3] == ProcessPlay.arrayPoint[2])
+                        {
+                            buttonP1.Text = "{" + ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                            buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                            buttonP3.Text = "{" + ProcessPlay.arrayPoint[2].x.ToString() + "; " + ProcessPlay.arrayPoint[2].y.ToString() + "}";
+                            buttonP4.Text = "";
+                        }
+                        else
+                        {
+                            buttonP1.Text = "{" + ProcessPlay.arrayPoint[0].x.ToString() + "; " + ProcessPlay.arrayPoint[0].y.ToString() + "}";
+                            buttonP2.Text = "{" + ProcessPlay.arrayPoint[1].x.ToString() + "; " + ProcessPlay.arrayPoint[1].y.ToString() + "}";
+                            buttonP3.Text = "{" + ProcessPlay.arrayPoint[2].x.ToString() + "; " + ProcessPlay.arrayPoint[2].y.ToString() + "}";
+                            buttonP4.Text = "{" + ProcessPlay.arrayPoint[3].x.ToString() + "; " + ProcessPlay.arrayPoint[3].y.ToString() + "}";
+                        }
+
                         panel.Controls.Remove(matrixIcon[p1.x - 1, p1.y - 1]);
                         panel.Controls.Remove(matrixIcon[p2.x - 1, p2.y - 1]);
                         numberMatrixIcon[p1.x, p1.y] = 0;

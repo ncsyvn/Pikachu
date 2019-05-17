@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labelSound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).BeginInit();
@@ -47,10 +48,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Game_Pikachu.Properties.Resources.khung_dai;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(193, 201);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(145, 163);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(185, 32);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -58,10 +58,9 @@
             // 
             this.NewName.BackColor = System.Drawing.Color.Black;
             this.NewName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.NewName.Location = new System.Drawing.Point(211, 209);
-            this.NewName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewName.Location = new System.Drawing.Point(158, 170);
             this.NewName.Name = "NewName";
-            this.NewName.Size = new System.Drawing.Size(212, 22);
+            this.NewName.Size = new System.Drawing.Size(160, 20);
             this.NewName.TabIndex = 1;
             this.NewName.Text = "-";
             // 
@@ -70,10 +69,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Game_Pikachu.Properties.Resources.khung_dai;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(193, 261);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(145, 212);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(247, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(185, 32);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -88,10 +86,9 @@
             "652",
             "652343246",
             "423423"});
-            this.comboBox1.Location = new System.Drawing.Point(211, 268);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(158, 218);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
+            this.comboBox1.Size = new System.Drawing.Size(160, 21);
             this.comboBox1.TabIndex = 3;
             // 
             // label1
@@ -100,10 +97,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(27, 210);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 22);
+            this.label1.Size = new System.Drawing.Size(115, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Người Chơi Mới";
             // 
@@ -113,10 +109,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(27, 268);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 22);
+            this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Người Chơi Cũ";
             // 
@@ -125,10 +120,9 @@
             this.buttonStart.BackColor = System.Drawing.Color.Transparent;
             this.buttonStart.BackgroundImage = global::Game_Pikachu.Properties.Resources.start2;
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonStart.Location = new System.Drawing.Point(244, 316);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonStart.Location = new System.Drawing.Point(183, 257);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(124, 43);
+            this.buttonStart.Size = new System.Drawing.Size(93, 35);
             this.buttonStart.TabIndex = 16;
             this.buttonStart.TabStop = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
@@ -138,20 +132,32 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox6.Location = new System.Drawing.Point(45, 36);
+            this.pictureBox6.Location = new System.Drawing.Point(34, 29);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(118, 61);
+            this.pictureBox6.Size = new System.Drawing.Size(88, 50);
             this.pictureBox6.TabIndex = 21;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // labelSound
+            // 
+            this.labelSound.AutoSize = true;
+            this.labelSound.BackColor = System.Drawing.Color.Transparent;
+            this.labelSound.Location = new System.Drawing.Point(83, 47);
+            this.labelSound.Name = "labelSound";
+            this.labelSound.Size = new System.Drawing.Size(34, 13);
+            this.labelSound.TabIndex = 22;
+            this.labelSound.Text = "         ";
+            // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelSound);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label2);
@@ -160,7 +166,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.NewName);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
@@ -184,5 +189,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox buttonStart;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label labelSound;
     }
 }
