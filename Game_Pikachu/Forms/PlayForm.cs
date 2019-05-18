@@ -14,11 +14,13 @@ namespace Game_Pikachu
 {
     public partial class PlayForm : Form
     {
+        public DataTable UserData;
         Sounds sound = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\102-palette town theme.mp3");
         int i_sounds = 1;
-        public PlayForm()
+        public PlayForm(DataTable UserData)
         {
             InitializeComponent();
+            this.UserData = UserData;
             // Chạy timer, có tác dụng ở progressBar            
             timer.Start();
             InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
@@ -55,7 +57,7 @@ namespace Game_Pikachu
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form newPlayForm = new PlayForm();
+            Form newPlayForm = new PlayForm(UserData);
             newPlayForm.StartPosition = FormStartPosition.CenterScreen;
             newPlayForm.Show();
         }

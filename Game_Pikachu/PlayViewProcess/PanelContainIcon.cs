@@ -267,8 +267,8 @@ namespace Game_Pikachu
                     // Trường hợp 2 Icon không ăn được nhau
                     else
                     {
-                        MessageBox.Show(position[0] + ' ' + position[1]);
-                        MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
+                        //MessageBox.Show(position[0] + ' ' + position[1]);
+                        //MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
 
                         // Tạo một Icon tg bằng với Icon p1, vì sự kiện của p1 lúc này không xử lý được nữa
                         PictureBox pictureBoxTg = new PictureBox();
@@ -299,7 +299,7 @@ namespace Game_Pikachu
             {
                 for (j = 0; j < 21; j++)
                 {
-                    matrixIcon[i, j].Click += PictureBox_Click;
+                    matrixIcon[i, j].Click += PictureBox_Click; 
                 }
             }
         }

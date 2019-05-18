@@ -61,7 +61,6 @@
             this.NewName.Name = "NewName";
             this.NewName.Size = new System.Drawing.Size(160, 20);
             this.NewName.TabIndex = 1;
-            this.NewName.Text = "-";
             // 
             // pictureBox2
             // 
@@ -86,7 +85,6 @@
             "652",
             "652343246",
             "423423"});
-            this.Load_DanhSachNguoiChoi();
             this.comboBox1.Location = new System.Drawing.Point(158, 218);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 21);
@@ -134,7 +132,7 @@
             this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox6.Location = new System.Drawing.Point(34, 29);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(88, 50);
             this.pictureBox6.TabIndex = 21;
