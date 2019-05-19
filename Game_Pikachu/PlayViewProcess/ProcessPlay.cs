@@ -318,6 +318,5 @@ namespace Game_Pikachu.PlayViewProcess
 
         }
         #endregion
-
     }
 }

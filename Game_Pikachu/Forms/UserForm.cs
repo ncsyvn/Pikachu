@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace Game_Pikachu
 {
@@ -18,13 +20,22 @@ namespace Game_Pikachu
         public UserForm()
         {
             InitializeComponent();
+            Load_DanhSachNguoiChoi();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.Hide();
             sound1.Stop();
-            PlayForm pf = new PlayForm();
+
+            if (this.NewName.Text == null || this.NewName.Text == "" || String.IsNullOrEmpty(this.NewName.Text) == true)
+            {
+
+            }
+            else
+            this.Add_User(this.NewName.Text);
+
+            PlayForm pf = new PlayForm(Load_UserData(this.comboBox1.Text));
             pf.Show();
         }
 
@@ -45,6 +56,81 @@ namespace Game_Pikachu
             {
                 labelSound.Visible = true;
                 sound1.Resume();
+            }
+        }
+        public void Load_DanhSachNguoiChoi()
+        {
+            
+            DataBase.Connection();
+
+            string SqlSelect_TenNguoiChoi = "Select Nguoi_Choi.Ten_Nguoi_Choi From Nguoi_Choi";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = DataBase.conn;
+            cmd.CommandText = SqlSelect_TenNguoiChoi;
+
+            try
+            {
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    var ListUser = new DataTable();
+                    ListUser.Load(reader);
+                    reader.Dispose();
+                    this.comboBox1.DataSource = ListUser;
+                    this.comboBox1.DisplayMember = "Ten_Nguoi_Choi";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+            DataBase.DisConnection();
+        }
+
+        public DataTable Load_UserData(string UserName)
+        {
+            var UserData = new DataTable();
+            try
+            {
+                DataBase.Connection();
+
+                string SqlSelect_TenNguoiChoi = "Select Nguoi_Choi.Ten_Nguoi_Choi,Diem,Level_Choi From Nguoi_Choi Where Ten_Nguoi_Choi = '" + UserName+"'";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = DataBase.conn;
+                cmd.CommandText = SqlSelect_TenNguoiChoi;
+
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    UserData.Load(reader);
+                    reader.Dispose();
+                    DataBase.DisConnection();
+                }                   
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+            return UserData;
+        }
+
+        public void Add_User(string UserName)
+        {
+            try
+            {
+                DataBase.Connection();
+
+                string SqlSelect_TenNguoiChoi = "Exec ThemNguoiChoi N'"+ UserName+"',null";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = DataBase.conn;
+                cmd.CommandText = SqlSelect_TenNguoiChoi;
+                cmd.ExecuteReader();
+                DataBase.DisConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
             }
         }
     }
