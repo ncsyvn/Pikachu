@@ -34,7 +34,6 @@ namespace Game_Pikachu
             }
             else
             this.Add_User(this.NewName.Text);
-
             PlayForm pf = new PlayForm(Load_UserData(this.comboBox1.Text));
             pf.Show();
         }

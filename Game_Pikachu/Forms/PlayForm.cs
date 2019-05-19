@@ -90,5 +90,6 @@ namespace Game_Pikachu
             PlayForm_Load(sender, e);
         }
 
+
     }
 }
