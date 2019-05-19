@@ -18,10 +18,11 @@ namespace Game_Pikachu
 
         Sounds sound = new Sounds(@"C:\Users\SyVN\SoundPlay.mp3");
         int i_sounds = 1;
+        public DataTable UserData = new DataTable();
         InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
         DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
         ProcessPlay processPlay = new ProcessPlay();
-        public PlayForm()
+        public PlayForm(DataTable UserData)
 
         {
             InitializeComponent();
