@@ -1,4 +1,5 @@
-﻿using Game_Pikachu.PlayViewProcess;
+﻿using Game_Pikachu.Forms;
+using Game_Pikachu.PlayViewProcess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,43 +15,63 @@ namespace Game_Pikachu
 {
     public partial class PlayForm : Form
     {
-        public DataTable UserData;
-        Sounds sound = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\102-palette town theme.mp3");
+
+        Sounds sound = new Sounds(@"C:\Users\SyVN\SoundPlay.mp3");
         int i_sounds = 1;
-        public PlayForm(DataTable UserData)
+        InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
+        DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
+        ProcessPlay processPlay = new ProcessPlay();
+        public PlayForm()
+
         {
             InitializeComponent();
             this.UserData = UserData;
             // Chạy timer, có tác dụng ở progressBar            
             timer.Start();
-            InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
-            DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
             InitialProcessPlay.ProcessEvent(drawPanelContainIcon, panelContainIcon);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             progressBarTime.PerformStep();
-           
+            if (progressBarTime.Value == 3000)
+            {
+                timer.Stop();
+                EndGame endGame = new EndGame();
+                endGame.Show();
+            }
+            else
+            {
+                labelHelp.Text = DrawPanelContainIcon.help.ToString();
+                labelMark.Text= DrawPanelContainIcon.mark.ToString();
+            }
+
         }
         private void PlayForm_Load(object sender, EventArgs e)
         {
             // ProgressBar chạy thời gian.
             progressBarTime.PerformStep();
+
             if (i_sounds % 2 == 0)
             {
+                labelSound.Visible = false;
                 sound.Pause();
             }
             else
             {
+                labelSound.Visible = true;
                 sound.Resume();
             }
+
         }
 
         // Exit Game
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            sound.Stop();
+            this.Dispose();
             this.Close();
+            this.Hide();
         }
 
         // Play again
@@ -67,5 +88,6 @@ namespace Game_Pikachu
             i_sounds++;
             PlayForm_Load(sender, e);
         }
+
     }
 }

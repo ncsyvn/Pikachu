@@ -9,6 +9,7 @@ namespace Game_Pikachu.PlayViewProcess
 {
     public class ProcessPlay
     {
+
         public static PointNew[] arrayPoint = new PointNew[4];
 
         #region Check Column
@@ -134,16 +135,16 @@ namespace Game_Pikachu.PlayViewProcess
                 {
                     if (FindColumn(matrixNumberIcon, p1tg, p2tg) == 1)
                     {
-                        arrayPoint[0] = p1;
-                        arrayPoint[1] = p1tg;
-                        arrayPoint[2] = p2tg;
-                        arrayPoint[3] = p2;
                         // Trường hợp i < p1.y
                         if (i < p1.y)
                         {
                             // Kiểm tra 2 hàng ngang từ p1tg đến p1 và p2tg đến p2
-                            if (FindRow(matrixNumberIcon, p1tg, p1) == 1 && FindRow(matrixNumberIcon, p2tg, p2) == 1)
+                            if (FindRow(matrixNumberIcon,  p1tg, p1) == 1 && FindRow(matrixNumberIcon,  p2tg, p2) == 1)
                             {
+                                arrayPoint[0] = p1;
+                                arrayPoint[1] = p1tg;
+                                arrayPoint[2] = p2tg;
+                                arrayPoint[3] = p2;
                                 return 1;
                             }
 
@@ -153,8 +154,12 @@ namespace Game_Pikachu.PlayViewProcess
                         else if (p1.y < i && i < p2.y)
                         {
                             // Kiểm tra 2 hàng ngang từ p1 đến p1tg và p2tg đến p2
-                            if (FindRow(matrixNumberIcon, p1, p1tg) == 1 && FindRow(matrixNumberIcon, p2tg, p2) == 1)
+                            if (FindRow(matrixNumberIcon,  p1, p1tg) == 1 && FindRow(matrixNumberIcon, p2tg, p2) == 1)
                             {
+                                arrayPoint[0] = p1;
+                                arrayPoint[1] = p1tg;
+                                arrayPoint[2] = p2tg;
+                                arrayPoint[3] = p2;
                                 return 1;
                             }
                         }
@@ -163,8 +168,12 @@ namespace Game_Pikachu.PlayViewProcess
                         else if (p2.y < i)
                         {
                             //Kiểm tra 2 hàng ngang từ p1tg đến p1 và p2 đến p2tg
-                            if (FindRow(matrixNumberIcon, p1tg, p1) == 1 && FindRow(matrixNumberIcon, p2, p2tg) == 1)
+                            if (FindRow(matrixNumberIcon,  p1tg, p1) == 1 && FindRow(matrixNumberIcon, p2, p2tg) == 1)
                             {
+                                arrayPoint[0] = p1;
+                                arrayPoint[1] = p1tg;
+                                arrayPoint[2] = p2tg;
+                                arrayPoint[3] = p2;
                                 return 1;
                             }
                         }
@@ -175,6 +184,8 @@ namespace Game_Pikachu.PlayViewProcess
                             // Kiểm tra 1 hàng ngang từ p2tg đến p2
                             if (FindRow(matrixNumberIcon, p1tg, p2) == 1)
                             {
+                                arrayPoint[0] = p1;
+                                arrayPoint[1] = p1tg;
                                 arrayPoint[2] = p2;
                                 arrayPoint[3] = p2;
                                 return 1;
@@ -187,6 +198,8 @@ namespace Game_Pikachu.PlayViewProcess
                             //Kiểm tra 1 hàng ngang từ p1 đến p1tg
                             if (FindRow(matrixNumberIcon, p1, p1tg) == 1)
                             {
+                                arrayPoint[0] = p1;
+                                arrayPoint[1] = p1tg;
                                 arrayPoint[2] = p2;
                                 arrayPoint[3] = p2;
                                 return 1;
@@ -203,7 +216,6 @@ namespace Game_Pikachu.PlayViewProcess
 
         }
         #endregion
-
 
         #region Kiểm tra đường đi gấp khúc từ trên xuống dưới
         public int ZigZugUpToDown(int [,] matrixNumberIcon, PointNew p1, PointNew p2)

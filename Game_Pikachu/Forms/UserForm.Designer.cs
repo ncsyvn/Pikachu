@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labelSound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).BeginInit();
@@ -132,12 +133,24 @@
             this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox6.Location = new System.Drawing.Point(34, 29);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(88, 50);
             this.pictureBox6.TabIndex = 21;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // labelSound
+            // 
+            this.labelSound.AutoSize = true;
+            this.labelSound.BackColor = System.Drawing.Color.Transparent;
+            this.labelSound.Location = new System.Drawing.Point(83, 47);
+            this.labelSound.Name = "labelSound";
+            this.labelSound.Size = new System.Drawing.Size(34, 13);
+            this.labelSound.TabIndex = 22;
+            this.labelSound.Text = "         ";
             // 
             // UserForm
             // 
@@ -146,6 +159,9 @@
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
+            this.Controls.Add(this.labelSound);
+
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label2);
@@ -177,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox buttonStart;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label labelSound;
     }
 }

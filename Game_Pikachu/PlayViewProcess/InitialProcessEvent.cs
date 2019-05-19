@@ -15,5 +15,6 @@ namespace Game_Pikachu.PlayViewProcess
             Panel panel = new Panel();
             drawPanelContainIcon.ProcessRandomIcon(panelContainIcon);
         }
+
     }
 }
