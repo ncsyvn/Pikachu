@@ -13,7 +13,7 @@ namespace Game_Pikachu
 {
     public partial class NewSelectForm : Form
     {
-        Sounds sound2 = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\101-opening (online-audio-converter.com).wav");
+        Sounds sound2 = new Sounds(@"C:\Users\SyVN\SoundSelect.mp3");
         int i_sounds2 = 1;
         public NewSelectForm()
         {
@@ -75,10 +75,12 @@ namespace Game_Pikachu
         {
             if (i_sounds2 % 2 == 0)
             {
+                labelSound.Visible = false;
                 sound2.Pause();
             }
             else
             {
+                labelSound.Visible = true;
                 sound2.Resume();
             }
         }

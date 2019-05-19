@@ -13,7 +13,7 @@ namespace Game_Pikachu
 {
     public partial class UserForm : Form
     {
-        Sounds sound1 = new Sounds(@"C:\Users\levan\Desktop\Pikachu\Game_Pikachu\Sounds and img Sounds\Content\102-palette town theme.mp3");
+        Sounds sound1 = new Sounds(@"C:\Users\SyVN\SoundUser.mp3");
         int i_sounds1 = 1;
         public UserForm()
         {
@@ -38,10 +38,12 @@ namespace Game_Pikachu
         {
             if (i_sounds1 % 2 == 0)
             {
+                labelSound.Visible = false;
                 sound1.Pause();
             }
             else
             {
+                labelSound.Visible = true;
                 sound1.Resume();
             }
         }
