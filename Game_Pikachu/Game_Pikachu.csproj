@@ -95,7 +95,6 @@
     <EmbeddedResource Include="Forms\EndGame.resx">
       <DependentUpon>EndGame.cs</DependentUpon>
     </EmbeddedResource>
-
     <Compile Include="Sounds and img Sounds\Sounds.cs" />
     <EmbeddedResource Include="Forms\NewSelectForm.resx">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
@@ -209,6 +208,8 @@
     <Content Include="Resources\4.png" />
     <Content Include="Resources\5.png" />
     <None Include="Resources\EndGame.jpg" />
+    <None Include="Resources\Help-icon.png" />
+    <None Include="Resources\Icon_Swap.png" />
     <Content Include="Resources\LineColumn.png" />
     <None Include="Resources\sad-emoticon-vector-417357.jpg" />
     <None Include="Resources\LineRow1.png" />

@@ -17,13 +17,14 @@ namespace Game_Pikachu
     {
         Sounds sound = new Sounds(@"C:\Users\SyVN\SoundPlay.mp3");
         int i_sounds = 1;
+        InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
+        DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
+        ProcessPlay processPlay = new ProcessPlay();
         public PlayForm()
         {
             InitializeComponent();
             // Chạy timer, có tác dụng ở progressBar            
             timer.Start();
-            InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
-            DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
             InitialProcessPlay.ProcessEvent(drawPanelContainIcon, panelContainIcon);
         }
 
@@ -35,6 +36,11 @@ namespace Game_Pikachu
                 timer.Stop();
                 EndGame endGame = new EndGame();
                 endGame.Show();
+            }
+            else
+            {
+                labelHelp.Text = DrawPanelContainIcon.help.ToString();
+                labelMark.Text= DrawPanelContainIcon.mark.ToString();
             }
 
         }
@@ -59,7 +65,10 @@ namespace Game_Pikachu
         // Exit Game
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            sound.Stop();
+            this.Dispose();
             this.Close();
+            this.Hide();
         }
 
         // Play again
@@ -76,5 +85,6 @@ namespace Game_Pikachu
             i_sounds++;
             PlayForm_Load(sender, e);
         }
+
     }
 }

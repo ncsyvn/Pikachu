@@ -59,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Jokerman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 71);
+            this.label1.Location = new System.Drawing.Point(3, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 39);
             this.label1.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.labelMark.BackColor = System.Drawing.Color.Black;
             this.labelMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMark.ForeColor = System.Drawing.Color.Lime;
-            this.labelMark.Location = new System.Drawing.Point(40, 118);
+            this.labelMark.Location = new System.Drawing.Point(33, 127);
             this.labelMark.Name = "labelMark";
             this.labelMark.Size = new System.Drawing.Size(24, 25);
             this.labelMark.TabIndex = 3;
