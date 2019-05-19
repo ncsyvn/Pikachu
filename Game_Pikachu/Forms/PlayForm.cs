@@ -44,6 +44,7 @@ namespace Game_Pikachu
                 timer.Stop();
                 EndGame endGame = new EndGame();
                 endGame.Show();
+                panelContainIcon.Enabled = false;
             }
             else
             {
