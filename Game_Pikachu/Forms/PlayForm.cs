@@ -15,14 +15,17 @@ namespace Game_Pikachu
 {
     public partial class PlayForm : Form
     {
+
         Sounds sound = new Sounds(@"C:\Users\SyVN\SoundPlay.mp3");
         int i_sounds = 1;
         InitialProcessEvent InitialProcessPlay = new InitialProcessEvent();
         DrawPanelContainIcon drawPanelContainIcon = new DrawPanelContainIcon();
         ProcessPlay processPlay = new ProcessPlay();
         public PlayForm()
+
         {
             InitializeComponent();
+            this.UserData = UserData;
             // Chạy timer, có tác dụng ở progressBar            
             timer.Start();
             InitialProcessPlay.ProcessEvent(drawPanelContainIcon, panelContainIcon);
@@ -75,7 +78,7 @@ namespace Game_Pikachu
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form newPlayForm = new PlayForm();
+            Form newPlayForm = new PlayForm(UserData);
             newPlayForm.StartPosition = FormStartPosition.CenterScreen;
             newPlayForm.Show();
         }

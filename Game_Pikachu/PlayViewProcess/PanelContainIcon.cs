@@ -392,6 +392,7 @@ namespace Game_Pikachu
                     // Trường hợp 2 Icon không ăn được nhau
                     else
                     {
+
                      //   MessageBox.Show(position[0] + ' ' + position[1]);
                        // MessageBox.Show(numberMatrixIcon[p2.x, p2.y].ToString());
 
@@ -424,7 +425,7 @@ namespace Game_Pikachu
             {
                 for (j = 0; j < 21; j++)
                 {
-                    matrixIcon[i, j].Click += PictureBox_Click;
+                    matrixIcon[i, j].Click += PictureBox_Click; 
                 }
             }
         }

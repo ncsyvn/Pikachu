@@ -62,7 +62,6 @@
             this.NewName.Name = "NewName";
             this.NewName.Size = new System.Drawing.Size(160, 20);
             this.NewName.TabIndex = 1;
-            this.NewName.Text = "-";
             // 
             // pictureBox2
             // 
@@ -79,6 +78,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Black;
             this.comboBox1.DisplayMember = "123";
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "432",
@@ -133,7 +133,9 @@
             this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox6.Location = new System.Drawing.Point(34, 29);
+
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(88, 50);
             this.pictureBox6.TabIndex = 21;
@@ -157,7 +159,9 @@
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.labelSound);
+
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label2);
