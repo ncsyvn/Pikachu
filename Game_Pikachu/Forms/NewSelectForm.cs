@@ -1,3 +1,4 @@
+﻿using Game_Pikachu.Forms;
 ﻿using Game_Pikachu.PlayViewProcess;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,9 @@ namespace Game_Pikachu
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             buttonAbout.Visible = false;
+            this.Hide();
+            FrmGioiThieu nv = new FrmGioiThieu();
+            nv.Show();
         }
         #endregion
 
