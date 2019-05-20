@@ -39,10 +39,18 @@
             this.progressBarTime = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelContainIcon = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.buttonPlayAgain = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelSound = new System.Windows.Forms.Label();
+            this.panelContainIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPlayAgain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Jokerman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 71);
+            this.label1.Location = new System.Drawing.Point(3, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 39);
             this.label1.TabIndex = 1;
@@ -75,7 +83,7 @@
             this.labelMark.BackColor = System.Drawing.Color.Black;
             this.labelMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMark.ForeColor = System.Drawing.Color.Lime;
-            this.labelMark.Location = new System.Drawing.Point(41, 119);
+            this.labelMark.Location = new System.Drawing.Point(33, 127);
             this.labelMark.Name = "labelMark";
             this.labelMark.Size = new System.Drawing.Size(24, 25);
             this.labelMark.TabIndex = 3;
@@ -145,15 +153,58 @@
             // 
             // timer
             // 
+            this.timer.Interval = 50;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // panelContainIcon
             // 
             this.panelContainIcon.BackColor = System.Drawing.Color.Transparent;
+            this.panelContainIcon.Controls.Add(this.label6);
+            this.panelContainIcon.Controls.Add(this.label5);
+            this.panelContainIcon.Controls.Add(this.label7);
             this.panelContainIcon.Location = new System.Drawing.Point(125, 51);
             this.panelContainIcon.Name = "panelContainIcon";
-            this.panelContainIcon.Size = new System.Drawing.Size(630, 362);
+            this.panelContainIcon.Size = new System.Drawing.Size(630, 399);
             this.panelContainIcon.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DeepPink;
+            this.label6.Location = new System.Drawing.Point(379, 376);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "->";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DeepPink;
+            this.label5.Location = new System.Drawing.Point(300, 376);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 16);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "->";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DeepPink;
+            this.label7.Location = new System.Drawing.Point(215, 376);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 16);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "->";
             // 
             // buttonPlayAgain
             // 
@@ -179,6 +230,29 @@
             this.buttonExit.TabStop = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 41);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // labelSound
+            // 
+            this.labelSound.AutoSize = true;
+            this.labelSound.BackColor = System.Drawing.Color.Transparent;
+            this.labelSound.Location = new System.Drawing.Point(62, 25);
+            this.labelSound.Name = "labelSound";
+            this.labelSound.Size = new System.Drawing.Size(22, 13);
+            this.labelSound.TabIndex = 15;
+            this.labelSound.Text = "     ";
+            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +261,8 @@
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.Fantastic_pokemon_hd_wallpaper_sumsung;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelSound);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonPlayAgain);
             this.Controls.Add(this.progressBarTime);
@@ -202,8 +278,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlayForm";
             this.Load += new System.EventHandler(this.PlayForm_Load);
+            this.panelContainIcon.ResumeLayout(false);
+            this.panelContainIcon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPlayAgain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +302,13 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.PictureBox buttonPlayAgain;
         private System.Windows.Forms.PictureBox buttonExit;
+
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelSound;
     }
 }

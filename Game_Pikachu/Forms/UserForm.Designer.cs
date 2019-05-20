@@ -35,9 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labelSound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,7 +62,6 @@
             this.NewName.Name = "NewName";
             this.NewName.Size = new System.Drawing.Size(160, 20);
             this.NewName.TabIndex = 1;
-            this.NewName.Text = "-";
             // 
             // pictureBox2
             // 
@@ -76,6 +78,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Black;
             this.comboBox1.DisplayMember = "123";
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "432",
@@ -124,6 +127,31 @@
             this.buttonStart.TabStop = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::Game_Pikachu.Properties.Resources.mute;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox6.Location = new System.Drawing.Point(34, 29);
+
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(88, 50);
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // labelSound
+            // 
+            this.labelSound.AutoSize = true;
+            this.labelSound.BackColor = System.Drawing.Color.Transparent;
+            this.labelSound.Location = new System.Drawing.Point(83, 47);
+            this.labelSound.Name = "labelSound";
+            this.labelSound.Size = new System.Drawing.Size(34, 13);
+            this.labelSound.TabIndex = 22;
+            this.labelSound.Text = "         ";
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +159,10 @@
             this.BackgroundImage = global::Game_Pikachu.Properties.Resources.tro_choi_pikachu_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
+            this.Controls.Add(this.labelSound);
+
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -141,9 +173,11 @@
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +192,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox buttonStart;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label labelSound;
     }
 }
