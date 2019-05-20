@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Rtb_Fill.Text" xml:space="preserve">
+    <value>      Xuất hiện lần đầu tiên vào năm 2003, với phiên bản cổ điển. Đến nay, game Pikachu đã trải qua 16 năm phát triển với rất nhiều các phiên bản game được ra đời trên PC và cả trên điện thoại với những tên gọi khác nhau như Pikachu truyền thống, Pikachu nội trợ, Pikachu mới, Pikachu trẻ em, Pikachu bản tiếng viêt, phiên bản hoa quả, phiên bản đối kháng. .. Nhưng xuất hiên dưới cái tên những cái tên khác nhau Game Pikachu vẫn luôn nhận được sự ủng hộ của đông đào người chơi.
+      
+      Đặc biết, trong game Pikachu có rất nhiều phiên bản game có mức độ chơi từ dễ đến khó, từ luyện tập đến nâng cao hoặc có cả những phiên bản thách đấu điểm cao để người chơi luyện tập và lựa chọn cho mình những phiên bản game thích hợp. Và bây giờ chúng tôi sẽ chia sẻ cho các bạn một số những hướng dẫn để chơi game Pikachu.
+
+     Khi lần đầu tiên nhìn vào game, bạn sẽ cảm thấy dễ bị mỏi mắt bởi có quá nhiều hình của những Pokemon. Trước hết bạn nên nhìn tổng thể một lượt, khi bạn bắt gặp những cặp Pokemon giống nhau mà ở những vị trí ở cạnh nhau thì hãy tiêu diệt chúng trước nhé.
+
+     Sau khi bạn ăn hết những cặp hình ở gần nhau thì số lượng hình trên màn hình sẽ ít đi, lúc này bạn sẽ dễ dàng quan sát hình và tìm được những cặp hình giống nhau ở những vị trí xa hơn, như thế game sẽ dễ dàng hơn rất nhiều. Hãy từng bước chinh phục game bạn nhé.
+
+     Bạn hãy chú ý đến những hình pokemon ở cũng phía của khung, dãy phía trên, cũng dãy phía dưới, cũng dãy bên trái, của bên phải của bàn chơi. Hay quan sát kỹ bạn nhé. Chắc chắn sẽ có hình giống nhau cho bạn chọn đó.
+
+   Hầu hết các bạn chơi game Pikachu đều mắc lỗi như sau: đó là hay bỏ qua các nước đi gần nhau nên hay bị bí ở những bước chơi sau. Nên một lời khuyên cho các bạn chơi game Pikachu là nên chọn những nước đi chắc chắn, không lâu sau đó, bạn sẽ trở thành cao thủ trong game Pikachu ngay thôi. Bạn nên nhớ rằng, sau khi ăn hết các cặp gần nhau và cũng một màn chơi thì sẽ tới phần khó khan nhất. Các pokemon ở rất xa nhau và khó tìm, vậy mẹo ở đây là bạn hãy nhìn từ gần ra xa. Tập chung vào một góc rồi tìm kiềm từ xa để tìm các con giống nhau.
+
+   Với những kinh nghiệm trên đã chia sẻ ở trên, tôi tin rằng bạn sẽ không mất quá nhiều thời gian cho việc trở thành cao thủ trong game Pikachu đâu. Chúc bạn chơi game vui vẻ!
+
+
+</value>
+  </data>
+</root>

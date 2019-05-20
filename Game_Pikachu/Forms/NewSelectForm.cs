@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_Pikachu.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +49,9 @@ namespace Game_Pikachu
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             buttonAbout.Visible = false;
+            this.Hide();
+            FrmGioiThieu nv = new FrmGioiThieu();
+            nv.Show();
         }
         #endregion
 
