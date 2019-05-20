@@ -72,19 +72,22 @@
     <Compile Include="Forms\EndGame.Designer.cs">
       <DependentUpon>EndGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHuongDan.Designer.cs">
+      <DependentUpon>FormHuongDan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NewSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\NewSelectForm.Designer.cs">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </Compile>
-
     <Compile Include="PlayViewProcess\DataBase.cs" />
     <Compile Include="PlayViewProcess\DBSQLServerUtils.cs" />
     <Compile Include="PlayViewProcess\DBUtils.cs" />
-
     <Compile Include="PlayViewProcess\DrawLine.cs" />
-
     <Compile Include="PlayViewProcess\InitialProcessEvent.cs" />
     <Compile Include="PlayViewProcess\PanelContainIcon.cs" />
     <Compile Include="Forms\PlayForm.cs">
@@ -110,6 +113,9 @@
       <DependentUpon>EndGame.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Sounds and img Sounds\Sounds.cs" />
+    <EmbeddedResource Include="Forms\FormHuongDan.resx">
+      <DependentUpon>FormHuongDan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewSelectForm.resx">
       <DependentUpon>NewSelectForm.cs</DependentUpon>
     </EmbeddedResource>

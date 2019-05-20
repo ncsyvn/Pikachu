@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Game_Pikachu.Forms;
+using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace Game_Pikachu
 {
@@ -40,6 +43,9 @@ namespace Game_Pikachu
         private void buttonContinue_Click(object sender, EventArgs e)
         {
             buttonContinue.Visible = false;
+            this.Hide();
+            PlayForm pf = new PlayForm(Load_UserData("a"), "a");
+            pf.Show();
         }
         #endregion
 
@@ -47,6 +53,8 @@ namespace Game_Pikachu
         private void buttonGuide_Click(object sender, EventArgs e)
         {
             buttonGuide.Visible = false;
+            Form FormHuongDan = new FormHuongDan();
+            FormHuongDan.Show();
         }
         #endregion
 
@@ -88,6 +96,32 @@ namespace Game_Pikachu
                 labelSound.Visible = true;
                 sound2.Resume();
             }
+        }
+        public DataTable Load_UserData(string UserName)
+        {
+            var UserData = new DataTable();
+            try
+            {
+                DataBase.Connection();
+
+                string SqlSelect_TenNguoiChoi = "Select Nguoi_Choi.Ten_Nguoi_Choi,Diem,Level_Choi From Nguoi_Choi Where Ten_Nguoi_Choi = '" + UserName+"'";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = DataBase.conn;
+                cmd.CommandText = SqlSelect_TenNguoiChoi;
+
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    UserData.Load(reader);
+                    reader.Dispose();
+                    DataBase.DisConnection();
+                }                   
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+            return UserData;
         }
     }
 }

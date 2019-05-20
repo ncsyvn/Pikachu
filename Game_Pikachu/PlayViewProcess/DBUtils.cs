@@ -11,7 +11,7 @@ namespace Game_Pikachu.PlayViewProcess
     {
         public static SqlConnection GetDBConnection()
         {
-            string datasource = @"DESKTOP-FDM076T\SQLEXPRESS";
+            string datasource = @"DESKTOP-SIBM61D";
 
             string database = "Game_Pikachu";
 
